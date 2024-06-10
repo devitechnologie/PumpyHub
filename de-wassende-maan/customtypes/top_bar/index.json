@@ -1,0 +1,44 @@
+{
+  "format": "custom",
+  "id": "top_bar",
+  "label": "Top Bar",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "center_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Center Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em"
+        }
+      },
+      "facebook_link": {
+        "type": "Link",
+        "config": {
+          "label": "Facebook Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "instagram_link": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Background Color",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

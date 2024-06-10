@@ -1,0 +1,47 @@
+{
+  "format": "custom",
+  "id": "testimonial",
+  "label": "Testimonial",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "comment": {
+        "type": "Text",
+        "config": {
+          "label": "Comment",
+          "placeholder": ""
+        }
+      },
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "Avatar",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "full_name": {
+        "type": "Text",
+        "config": {
+          "label": "Full Name",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

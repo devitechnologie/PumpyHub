@@ -1,0 +1,133 @@
+{
+  "format": "page",
+  "id": "page",
+  "label": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "video": {
+              "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
+            },
+            "top_of_news": {
+              "type": "SharedSlice"
+            },
+            "text_with_image": {
+              "type": "SharedSlice"
+            },
+            "slice_double_col_with_picto": {
+              "type": "SharedSlice"
+            },
+            "recipes_list": {
+              "type": "SharedSlice"
+            },
+            "newsletter": {
+              "type": "SharedSlice"
+            },
+            "search_result": {
+              "type": "SharedSlice"
+            },
+            "promo_products": {
+              "type": "SharedSlice"
+            },
+            "simple_cover": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "hight_lights": {
+              "type": "SharedSlice"
+            },
+            "faq": {
+              "type": "SharedSlice"
+            },
+            "latest_news": {
+              "type": "SharedSlice"
+            },
+            "latest_events": {
+              "type": "SharedSlice"
+            },
+            "latest_recipes": {
+              "type": "SharedSlice"
+            },
+            "home_slider": {
+              "type": "SharedSlice"
+            },
+            "news_list": {
+              "type": "SharedSlice"
+            },
+            "jobs_list": {
+              "type": "SharedSlice"
+            },
+            "latest_jobs": {
+              "type": "SharedSlice"
+            },
+            "cols_with_image_text": {
+              "type": "SharedSlice"
+            },
+            "free_txt": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "jobs_form": {
+              "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
+            },
+            "events_list": {
+              "type": "SharedSlice"
+            },
+            "contact_us": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

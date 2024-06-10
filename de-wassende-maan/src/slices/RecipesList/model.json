@@ -1,0 +1,18 @@
+{
+  "id": "recipes_list",
+  "type": "SharedSlice",
+  "name": "RecipesList",
+  "description": "RecipesList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {}
+    }
+  ]
+}

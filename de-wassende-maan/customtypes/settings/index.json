@@ -1,0 +1,88 @@
+{
+  "format": "custom",
+  "id": "settings",
+  "label": "settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "site_title": {
+        "type": "Text",
+        "config": {
+          "label": "Site title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta description",
+          "placeholder": ""
+        }
+      },
+      "og_image": {
+        "type": "Image",
+        "config": {
+          "label": "OG Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "languages": {
+        "type": "Group",
+        "config": {
+          "label": "languages",
+          "repeat": true,
+          "fields": {
+            "en_us": {
+              "type": "Text",
+              "config": {
+                "label": "en-us",
+                "placeholder": ""
+              }
+            },
+            "fr_fr": {
+              "type": "Text",
+              "config": {
+                "label": "fr-fr",
+                "placeholder": ""
+              }
+            },
+            "nl_be": {
+              "type": "Text",
+              "config": {
+                "label": "nl-be",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "favicon": {
+        "type": "Image",
+        "config": {
+          "label": "Favicon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "fontfamily": {
+        "type": "Select",
+        "config": {
+          "label": "fontFamily",
+          "placeholder": "Global typo",
+          "options": [
+            "instrumentSans",
+            "openSans",
+            "poppins",
+            "dmSans",
+            "roboto",
+            "rubik",
+            "montserrat"
+          ],
+          "default_value": "instrumentSans"
+        }
+      }
+    }
+  }
+}

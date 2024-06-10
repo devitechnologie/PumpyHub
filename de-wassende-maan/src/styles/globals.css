@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nav-height: 166px;
+}
+
+.app-container {
+  @apply container mx-auto px-4 max-w-[1300px];
+}
+
+.input {
+  @apply w-full px-4 py-1.5 border border-gray-300 rounded-md outline-none focus:border-primary-green;
+}
+
+.input.error {
+  @apply ring-1 ring-red-500 border-transparent focus:border-primary-green focus:ring-0;
+}
+
+.h2 {
+  @apply text-2xl font-bold;
+}
+
+.h3 {
+  @apply text-xl font-semibold;
+}
+
+.h4 {
+  @apply text-lg font-semibold;
+}
+
+.p {
+  @apply text-base;
+}
+
+.swiper-pagination-bullet {
+  @apply !border !opacity-100 !border-transparent !relative !w-[18px] !h-[18px] !bg-transparent transition-all duration-300 after:!block after:!absolute after:!w-[8px] after:!h-[8px] after:!border after:!border-primary-black after:!rounded-full after:!top-1/2 after:!left-1/2 after:!transform after:!-translate-x-1/2 after:!-translate-y-1/2 after:!transition-all after:!duration-300;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply !border-primary-black after:!bg-primary-black;
+}
+
+.section-py {
+  @apply md:py-16 py-12;
+}
+
+.section-pt {
+  @apply md:pt-16 pt-12;
+}
+
+.section-pb {
+  @apply md:pb-16 pb-12;
+}
+
+.section-py-sm {
+  @apply md:py-10 py-8
+}
+
+.section-pt-sm {
+  @apply md:pt-10 pt-8
+}
+
+.section-pb-sm {
+  @apply md:pb-10 pb-8
+}
+
+.section-py-xs {
+  @apply md:py-8 py-6
+}
+
+.section-pt-xs {
+  @apply md:pt-8 pt-6
+}
+
+.section-pb-xs {
+  @apply md:pb-8 pb-6
+}

@@ -1,0 +1,28 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"reply_to": {
+				"__TYPE__": "FieldContent",
+				"value": "flower",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"emails_cc",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "three",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]
