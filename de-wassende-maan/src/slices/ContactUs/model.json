@@ -1,0 +1,34 @@
+{
+  "id": "contact_us",
+  "type": "SharedSlice",
+  "name": "ContactUs",
+  "description": "ContactUs",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "reply_to": {
+          "type": "Text",
+          "config": {
+            "label": "Reply To",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "emails_cc": {
+          "type": "Text",
+          "config": {
+            "label": "Emails Cc",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

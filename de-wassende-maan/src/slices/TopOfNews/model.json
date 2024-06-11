@@ -1,0 +1,39 @@
+{
+  "id": "top_of_news",
+  "type": "SharedSlice",
+  "name": "TopOfNews",
+  "description": "TopOfNews",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "content": {
+          "type": "Link",
+          "config": {
+            "label": "content",
+            "select": "document",
+            "customtypes": [
+              "newspage",
+              "jobspage",
+              "eventpage"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

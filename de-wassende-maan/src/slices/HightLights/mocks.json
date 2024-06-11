@@ -1,0 +1,248 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+								"width": 5616,
+								"height": 3744
+							},
+							"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+							"width": 5616,
+							"height": 3744,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"background_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#9b11dd",
+							"type": "Color"
+						}
+					],
+					[
+						"text_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "dark",
+							"type": "Select"
+						}
+					],
+					[
+						"text_alignment",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "center",
+							"type": "Select"
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Planned"
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "highlightsHeading",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "become",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+								"width": 4016,
+								"height": 6016
+							},
+							"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+							"width": 4016,
+							"height": 6016,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Detail"
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "highlightsHeading3Column",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "coast",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+								"width": 4380,
+								"height": 2895
+							},
+							"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+							"width": 4380,
+							"height": 2895,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Remarkable"
+									}
+								}
+							]
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"background_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#31f5aa",
+							"type": "Color"
+						}
+					],
+					[
+						"text_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "light",
+							"type": "Select"
+						}
+					],
+					[
+						"text_alignment",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "center",
+							"type": "Select"
+						}
+					]
+				]
+			}
+		]
+	}
+]

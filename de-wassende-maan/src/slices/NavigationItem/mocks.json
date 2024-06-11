@@ -1,0 +1,45 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"name_of_the_link": {
+				"__TYPE__": "FieldContent",
+				"value": "duty",
+				"type": "Text"
+			},
+			"link_for_the_item": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"child_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "do",
+							"type": "Text"
+						}
+					],
+					[
+						"child_link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]

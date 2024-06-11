@@ -1,0 +1,151 @@
+{
+  "format": "custom",
+  "id": "navigation_footer",
+  "label": "navigation Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "informations": {
+        "type": "Group",
+        "config": {
+          "label": "Informations",
+          "repeat": true,
+          "fields": {
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "text",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "liens_rapides": {
+        "type": "Group",
+        "config": {
+          "label": "Liens rapides",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "text",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "service_client": {
+        "type": "Group",
+        "config": {
+          "label": "Service client",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "text",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "facebook_link": {
+        "type": "Link",
+        "config": {
+          "label": "facebook link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "instagram_link": {
+        "type": "Link",
+        "config": {
+          "label": "instagram link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "address_col_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Address Col 1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,hyperlink,strong,em"
+        }
+      },
+      "address_col_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Address Col 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,hyperlink,strong,em"
+        }
+      },
+      "address_col_3": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Address Col 3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,hyperlink,strong,em"
+        }
+      },
+      "brand_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Brand Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "label": {
+        "type": "Image",
+        "config": {
+          "label": "Label",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "copyright": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Copyright",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink"
+        }
+      }
+    }
+  }
+}

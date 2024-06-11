@@ -1,0 +1,43 @@
+{
+  "id": "jobs_form",
+  "type": "SharedSlice",
+  "name": "JobsForm",
+  "description": "JobsForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,strong,em"
+          }
+        },
+        "reply_to": {
+          "type": "Text",
+          "config": {
+            "label": "Reply To",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "email_cc": {
+          "type": "Text",
+          "config": {
+            "label": "Email Cc",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

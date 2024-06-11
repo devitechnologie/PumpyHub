@@ -1,0 +1,54 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Famous"
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"accordion_heading",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Black"
+									}
+								}
+							]
+						}
+					],
+					[
+						"accordion_body",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Lorem culpa do qui duis occaecat proident ullamco. Consectetur laborum commodo anim duis amet anim non aliqua tempor veniam id consequat."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

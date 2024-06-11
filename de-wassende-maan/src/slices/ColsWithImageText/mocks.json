@@ -1,0 +1,408 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Identity"
+						}
+					}
+				]
+			},
+			"body_col_1": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad adipisicing elit magna dolor excepteur reprehenderit commodo. Adipisicing dolor et deserunt velit est excepteur ad labore eu exercitation culpa et occaecat incididunt veniam. Lorem enim anim nisi incididunt labore culpa velit nisi qui."
+						}
+					}
+				]
+			},
+			"heading_col_1": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Citizen"
+						}
+					}
+				]
+			},
+			"heading_col_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Choice"
+						}
+					}
+				]
+			},
+			"body_col_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolor est officia ad magna consequat ea do. Do duis laboris consequat id voluptate ad non eu do ullamco."
+						}
+					}
+				]
+			},
+			"image_col_1": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+					"width": 4480,
+					"height": 4480
+				},
+				"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+				"width": 4480,
+				"height": 4480,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"image_col_2": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+					"width": 3560,
+					"height": 5340
+				},
+				"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+				"width": 3560,
+				"height": 5340,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#98682e",
+				"type": "Color"
+			},
+			"image_col_3": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+					"width": 4752,
+					"height": 3168
+				},
+				"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+				"width": 4752,
+				"height": 3168,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_col_3": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Mistake"
+						}
+					}
+				]
+			},
+			"body_col_3": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco amet irure laboris consequat et. Irure laborum ullamco deserunt esse deserunt eu."
+						}
+					}
+				]
+			},
+			"badge_col_1": {
+				"__TYPE__": "FieldContent",
+				"value": "speed",
+				"type": "Text"
+			},
+			"badge_col_2": {
+				"__TYPE__": "FieldContent",
+				"value": "heard",
+				"type": "Text"
+			},
+			"badge_col_3": {
+				"__TYPE__": "FieldContent",
+				"value": "railroad",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "4Columns",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Paper"
+						}
+					}
+				]
+			},
+			"image_col_1": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+					"width": 3212,
+					"height": 3880
+				},
+				"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+				"width": 3212,
+				"height": 3880,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_col_1": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Tried"
+						}
+					}
+				]
+			},
+			"body_col_1": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Voluptate nulla et ex irure do reprehenderit nulla."
+						}
+					}
+				]
+			},
+			"image_col_2": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+					"width": 3424,
+					"height": 3424
+				},
+				"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+				"width": 3424,
+				"height": 3424,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_col_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Variety"
+						}
+					}
+				]
+			},
+			"body_col_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Incididunt elit tempor velit est voluptate quis sint ea officia culpa."
+						}
+					}
+				]
+			},
+			"image_col_3": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+					"width": 3935,
+					"height": 5894
+				},
+				"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+				"width": 3935,
+				"height": 5894,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_col_3": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Fresh"
+						}
+					}
+				]
+			},
+			"body_col_3": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Proident laborum veniam laboris pariatur cupidatat incididunt cillum id enim amet labore ex fugiat nisi consectetur. Velit ad laborum enim Lorem tempor cupidatat eu eiusmod ex eu ea excepteur pariatur nostrud magna. Id exercitation est Lorem excepteur minim sunt amet pariatur amet mollit."
+						}
+					}
+				]
+			},
+			"heading_col_4": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Eight"
+						}
+					}
+				]
+			},
+			"body_col_4": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse laboris occaecat fugiat mollit occaecat esse veniam veniam duis voluptate aliquip duis sit."
+						}
+					}
+				]
+			},
+			"image_col_4": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#5511ae",
+				"type": "Color"
+			},
+			"badge_col_1": {
+				"__TYPE__": "FieldContent",
+				"value": "hurt",
+				"type": "Text"
+			},
+			"badge_col_2": {
+				"__TYPE__": "FieldContent",
+				"value": "afraid",
+				"type": "Text"
+			},
+			"badge_col_3": {
+				"__TYPE__": "FieldContent",
+				"value": "separate",
+				"type": "Text"
+			},
+			"badge_col_4": {
+				"__TYPE__": "FieldContent",
+				"value": "brief",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

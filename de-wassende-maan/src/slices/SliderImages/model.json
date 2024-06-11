@@ -1,0 +1,74 @@
+{
+  "id": "home_slider",
+  "type": "SharedSlice",
+  "name": "SliderImages",
+  "description": "HomeSlider",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "slider_image": {
+          "type": "Image",
+          "config": {
+            "label": "slider image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "subtitle",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "button text",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "button link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "text_color": {
+          "type": "Select",
+          "config": {
+            "label": "Text Color",
+            "placeholder": "",
+            "options": ["dark", "light"],
+            "default_value": "dark"
+          }
+        },
+        "text_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "Text Alignment",
+            "placeholder": "",
+            "options": ["left", "center", "right"],
+            "default_value": "left"
+          }
+        }
+      }
+    }
+  ]
+}

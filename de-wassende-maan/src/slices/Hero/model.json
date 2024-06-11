@@ -1,0 +1,223 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Hero",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "heading",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "button link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "button text",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Select",
+          "config": {
+            "label": "Text Color",
+            "placeholder": "",
+            "options": [
+              "light",
+              "dark"
+            ],
+            "default_value": "light"
+          }
+        },
+        "text_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "Text Alignment",
+            "placeholder": "",
+            "options": [
+              "center",
+              "left",
+              "right"
+            ],
+            "default_value": "center"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "heroDouble",
+      "name": "HeroDouble",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "first hero image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "first hero heading",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "first hero text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "first hero button link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "first hero button text",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Select",
+          "config": {
+            "label": "first hero Text Color",
+            "placeholder": "",
+            "options": [
+              "light",
+              "dark"
+            ],
+            "default_value": "light"
+          }
+        },
+        "text_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "first hero Text Alignment",
+            "placeholder": "",
+            "options": [
+              "center",
+              "left",
+              "right"
+            ],
+            "default_value": "center"
+          }
+        },
+        "second_hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "second hero image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "second_hero_heading": {
+          "type": "Text",
+          "config": {
+            "label": "second hero heading",
+            "placeholder": ""
+          }
+        },
+        "second_hero_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "second hero text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "second_hero_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "second hero button link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "second_hero_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "second hero button text",
+            "placeholder": ""
+          }
+        },
+        "second_hero_text_color": {
+          "type": "Select",
+          "config": {
+            "label": "second hero Text color",
+            "placeholder": "",
+            "options": [
+              "light",
+              "dark"
+            ],
+            "default_value": "light"
+          }
+        },
+        "second_hero_text_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "second hero Text alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ],
+            "default_value": "left"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "format": "page",
+  "id": "recipespage",
+  "label": "RecipesPage",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "heading1,strong,em"
+        }
+      },
+      "short_description": {
+        "type": "Text",
+        "config": {
+          "label": "Short Description",
+          "placeholder": ""
+        }
+      },
+      "publication_date": {
+        "type": "Timestamp",
+        "config": {
+          "label": "Publication Date",
+          "placeholder": ""
+        }
+      },
+      "periods": {
+        "type": "Group",
+        "config": {
+          "label": "Periods",
+          "repeat": true,
+          "fields": {
+            "period": {
+              "type": "Link",
+              "config": {
+                "label": "Period",
+                "select": "document",
+                "customtypes": ["recipes_period"]
+              }
+            }
+          }
+        }
+      },
+      "ingredients": {
+        "type": "Group",
+        "config": {
+          "label": "Ingredients",
+          "repeat": true,
+          "fields": {
+            "ingredient": {
+              "type": "Link",
+              "config": {
+                "label": "Ingredient",
+                "select": "document",
+                "customtypes": ["recipes_ingredient"]
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "faq": {
+              "type": "SharedSlice"
+            },
+            "slice_double_col_with_picto": {
+              "type": "SharedSlice"
+            },
+            "simple_cover": {
+              "type": "SharedSlice"
+            },
+            "text_with_image": {
+              "type": "SharedSlice"
+            },
+            "latest_events": {
+              "type": "SharedSlice"
+            },
+            "latest_recipes": {
+              "type": "SharedSlice"
+            },
+            "hight_lights": {
+              "type": "SharedSlice"
+            },
+            "newsletter": {
+              "type": "SharedSlice"
+            },
+            "top_of_news": {
+              "type": "SharedSlice"
+            },
+            "latest_news": {
+              "type": "SharedSlice"
+            },
+            "home_slider": {
+              "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
+            },
+            "free_txt": {
+              "type": "SharedSlice"
+            },
+            "latest_jobs": {
+              "type": "SharedSlice"
+            },
+            "promo_products": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
