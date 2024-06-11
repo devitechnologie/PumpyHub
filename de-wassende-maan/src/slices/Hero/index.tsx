@@ -32,6 +32,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           text={slice.primary.text}
           buttonLink={slice.primary.button_link}
           buttonText={slice.primary.button_text}
+          btnRadius={slice.primary.button_border_radius || undefined}
         />
         <HeroContent
           imageUrl={slice.primary.second_hero_image.url}
@@ -41,6 +42,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           text={slice.primary.second_hero_text}
           buttonLink={slice.primary.second_hero_button_link}
           buttonText={slice.primary.second_hero_button_text}
+          btnRadius={slice.primary.button_border_radius || undefined}
         />
       </section>
     )
@@ -61,6 +63,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         buttonText={slice.primary.button_text}
         className="aspect-[16/5]"
         contentClassName="container mx-auto max-w-[1300px] p-8 md:p-4"
+        btnRadius={slice.primary.button_border_radius || undefined}
       />
     </section>
   );
@@ -76,9 +79,10 @@ type HeroContentProps = {
   buttonText: KeyTextField;
   className?: string;
   contentClassName?: string;
+  btnRadius?: number;
 }
 
-const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink, buttonText, className, contentClassName }: HeroContentProps): JSX.Element => {
+const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink, buttonText, className, contentClassName, btnRadius = 16 }: HeroContentProps): JSX.Element => {
   return (
     <div
       style={{ backgroundImage: `url(${imageUrl})` }}
@@ -140,7 +144,10 @@ const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink
             <ButtonLink
               field={buttonLink}
               variant={textColor === "dark" ? "primary" : "secondary"}
-              className="mt-8 capitalize rounded-2xl px-8 py-3"
+              style={{
+                borderRadius: btnRadius
+              }}
+              className="mt-8 capitalize px-8 py-3"
             >
               {buttonText}
             </ButtonLink>

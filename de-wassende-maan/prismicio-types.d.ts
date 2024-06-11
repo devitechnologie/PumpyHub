@@ -2928,6 +2928,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   text_alignment: prismic.SelectField<"center" | "left" | "right", "filled">;
+
+  /**
+   * button border radius (Optionnel) field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 16px
+   * - **API ID Path**: hero.primary.button_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  button_border_radius: prismic.NumberField;
 }
 
 /**
@@ -3093,6 +3103,16 @@ export interface HeroSliceHeroDoublePrimary {
     "left" | "center" | "right",
     "filled"
   >;
+
+  /**
+   * button border radius field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 16px
+   * - **API ID Path**: hero.primary.button_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  button_border_radius: prismic.NumberField;
 }
 
 /**
@@ -3417,6 +3437,21 @@ export type HightLightsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SliderImages → Primary*
+ */
+export interface HomeSliderSliceDefaultPrimary {
+  /**
+   * button border radius (Optionnel) field in *SliderImages → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 12px
+   * - **API ID Path**: home_slider.primary.border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  border_radius: prismic.NumberField;
+}
+
+/**
  * Primary content in *SliderImages → Items*
  */
 export interface HomeSliderSliceDefaultItem {
@@ -3502,7 +3537,7 @@ export interface HomeSliderSliceDefaultItem {
  */
 export type HomeSliderSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<HomeSliderSliceDefaultPrimary>,
   Simplify<HomeSliderSliceDefaultItem>
 >;
 
@@ -4772,6 +4807,7 @@ declare module "@prismicio/client" {
       HightLightsSliceHighlightsHeading,
       HightLightsSliceHighlightsHeading3Column,
       HomeSliderSlice,
+      HomeSliderSliceDefaultPrimary,
       HomeSliderSliceDefaultItem,
       HomeSliderSliceVariation,
       HomeSliderSliceDefault,

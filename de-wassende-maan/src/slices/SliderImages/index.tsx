@@ -71,9 +71,12 @@ const HomeSlider = ({ slice }: HomeSliderProps): JSX.Element => {
                     {item.subtitle}
                   </p>
                   <ButtonLink
+                    style={{
+                      borderRadius: slice.primary.border_radius || 12
+                    }}
                     className={
                       cn(
-                        "px-8 py-3 mt-8 bg-primary-black text-primary-white hover:bg-primary-green transition-all drop-shadow-lg duration-300 font-medium rounded-xl",
+                        "px-8 py-3 mt-8 bg-primary-black text-primary-white hover:bg-primary-green transition-all drop-shadow-lg duration-300 font-medium",
                         item.text_color === "light" && "bg-white text-primary-black hover:bg-primary-black hover:text-white")
                     }
                     field={item.button_link}

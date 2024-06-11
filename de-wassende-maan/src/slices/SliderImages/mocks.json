@@ -2,7 +2,13 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "39",
+				"type": "Number"
+			}
+		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",

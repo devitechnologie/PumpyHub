@@ -63,6 +63,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "center",
 				"type": "Select"
+			},
+			"button_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "72",
+				"type": "Number"
 			}
 		},
 		"items": []
@@ -192,6 +197,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "right",
 				"type": "Select"
+			},
+			"button_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "16",
+				"type": "Number"
 			}
 		},
 		"items": [

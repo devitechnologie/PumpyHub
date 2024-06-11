@@ -11,7 +11,15 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
+      "primary": {
+        "border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "button border radius (Optionnel)",
+            "placeholder": "default is 12px"
+          }
+        }
+      },
       "items": {
         "slider_image": {
           "type": "Image",
@@ -55,7 +63,10 @@
           "config": {
             "label": "Text Color",
             "placeholder": "",
-            "options": ["dark", "light"],
+            "options": [
+              "dark",
+              "light"
+            ],
             "default_value": "dark"
           }
         },
@@ -64,7 +75,11 @@
           "config": {
             "label": "Text Alignment",
             "placeholder": "",
-            "options": ["left", "center", "right"],
+            "options": [
+              "left",
+              "center",
+              "right"
+            ],
             "default_value": "left"
           }
         }

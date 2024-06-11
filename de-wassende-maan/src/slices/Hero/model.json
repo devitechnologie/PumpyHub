@@ -75,6 +75,13 @@
             ],
             "default_value": "center"
           }
+        },
+        "button_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "button border radius (Optionnel)",
+            "placeholder": "default is 16px"
+          }
         }
       },
       "items": {}
@@ -214,6 +221,13 @@
               "right"
             ],
             "default_value": "left"
+          }
+        },
+        "button_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "button border radius",
+            "placeholder": "default is 16px"
           }
         }
       },
