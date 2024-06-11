@@ -12,19 +12,20 @@ import Badge from "@/components/ui/Badge";
 import Paragraph from "@/components/ui/Paragraph";
 import Heading from "./ui/Heading";
 import Button from "./ui/Button";
-import { listNewsPaths } from "@/utils/routesData";
+import { TLocals, listNewsPaths } from "@/utils/routesData";
 
 type NewsCardProps = {
   news: NewspageDocument
   horizontal?: boolean
   size?: 'small'
   isLatest?: boolean
+  borderRadius?: number
 }
 
-const NewsCard = ({ news, horizontal, size, isLatest }: NewsCardProps) => {
+const NewsCard = ({ news, horizontal, size, isLatest, borderRadius = 20 }: NewsCardProps) => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
-  const path = listNewsPaths[lang as 'en' | 'fr' | 'nl']
+  const path = listNewsPaths[lang as TLocals]
 
   if (horizontal && size === 'small') {
     return (
@@ -33,7 +34,8 @@ const NewsCard = ({ news, horizontal, size, isLatest }: NewsCardProps) => {
         className="flex items-center gap-2 group"
       >
         <div
-          className="aspect-square h-[100px] min-w-[100px] rounded-[20px] overflow-hidden"
+          style={{ borderRadius }}
+          className="aspect-square h-[100px] min-w-[100px] overflow-hidden"
         >
           <PrismicNextImage
             field={news.data.image}
@@ -77,7 +79,8 @@ const NewsCard = ({ news, horizontal, size, isLatest }: NewsCardProps) => {
         className="block space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:space-x-8 group sm:place-items-center"
       >
         <div
-          className="aspect-[3/2] sm:aspect-video sm:h-[290px] sm:w-full rounded-[20px] overflow-hidden"
+          style={{ borderRadius }}
+          className="aspect-[3/2] sm:aspect-video sm:h-[290px] sm:w-full overflow-hidden"
         >
           <PrismicNextImage
             field={news.data.image}
@@ -133,7 +136,8 @@ const NewsCard = ({ news, horizontal, size, isLatest }: NewsCardProps) => {
       className="block group space-y-4"
     >
       <div
-        className="aspect-[3/2] rounded-[20px] overflow-hidden"
+        style={{ borderRadius }}
+        className="aspect-[3/2] overflow-hidden"
       >
         <PrismicNextImage
           field={news.data.image}

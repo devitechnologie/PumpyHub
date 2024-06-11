@@ -15,6 +15,7 @@ export type LatestNewsProps = SliceComponentProps<Content.LatestNewsSlice, { lan
  */
 const LatestNews = async ({ slice, context }: LatestNewsProps): Promise<JSX.Element> => {
   const client = createClient()
+  const settings = await client.getSingle("settings", { lang: context.lang })
   const news = await client.getAllByType("newspage",
     {
       limit: 3,
@@ -53,6 +54,7 @@ const LatestNews = async ({ slice, context }: LatestNewsProps): Promise<JSX.Elem
                 key={data.id}
                 news={data}
                 isLatest
+                borderRadius={settings.data.images_raduis || undefined}
               />
             )
             )

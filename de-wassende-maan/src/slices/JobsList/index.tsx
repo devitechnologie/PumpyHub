@@ -25,6 +25,7 @@ const JobsList = async ({ slice, context }: JobsListProps): Promise<JSX.Element>
   const searchParams = context.searchParams as unknown as { search?: string, page?: string, category?: string, tag?: string }
   const client = createClient()
   const { t } = await initTranslations(getShortLocale(context.lang as string), ['*'], null, null)
+  const settings = await client.getSingle("settings", { lang: context.lang })
 
   const latestJobs = await client.getAllByType("jobspage",
     {
@@ -101,7 +102,7 @@ const JobsList = async ({ slice, context }: JobsListProps): Promise<JSX.Element>
       className="section-py flex flex-wrap gap-4 md:gap-0"
     >
       <div className="md:w-[70%]">
-        <JobsListSection jobs={paginatedJobs.results} t={t} />
+        <JobsListSection jobs={paginatedJobs.results} t={t} settings={settings} />
         <ListPagination
           totalPages={paginatedJobs.total_pages}
           currentPage={paginatedJobs.page}
@@ -109,7 +110,7 @@ const JobsList = async ({ slice, context }: JobsListProps): Promise<JSX.Element>
       </div>
       <aside className="md:w-[30%] md:pl-12 space-y-4 mt-4 sm:mt-0 overflow-hidden">
         <Search />
-        <SmallLatestJobs jobs={latestJobs} t={t} />
+        <SmallLatestJobs jobs={latestJobs} t={t} settings={settings} />
         <Divider />
         <Categories
           categories={categories}
@@ -127,7 +128,7 @@ const JobsList = async ({ slice, context }: JobsListProps): Promise<JSX.Element>
   );
 };
 
-const JobsListSection = ({ jobs, t }: { jobs: Content.JobspageDocument[], t: any }) => {
+const JobsListSection = ({ jobs, t, settings }: { jobs: Content.JobspageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div
       className="grid grid-cols-1 gap-4 md:gap-8 w-full"
@@ -138,6 +139,7 @@ const JobsListSection = ({ jobs, t }: { jobs: Content.JobspageDocument[], t: any
             key={data.id}
             jobs={data}
             horizontal
+            borderRadius={settings.data.images_raduis || undefined}
           />
         ))
       }
@@ -160,7 +162,7 @@ const JobsListSection = ({ jobs, t }: { jobs: Content.JobspageDocument[], t: any
   )
 }
 
-const SmallLatestJobs = ({ jobs, t }: { jobs: Content.JobspageDocument[], t: any }) => {
+const SmallLatestJobs = ({ jobs, t, settings }: { jobs: Content.JobspageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div>
       <Heading
@@ -183,6 +185,7 @@ const SmallLatestJobs = ({ jobs, t }: { jobs: Content.JobspageDocument[], t: any
               horizontal
               size="small"
               isLatest
+              borderRadius={settings.data.images_raduis || undefined}
             />
           ))
         }

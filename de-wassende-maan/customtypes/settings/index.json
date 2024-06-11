@@ -82,6 +82,13 @@
           ],
           "default_value": "instrumentSans"
         }
+      },
+      "images_raduis": {
+        "type": "Number",
+        "config": {
+          "label": "Images Radius",
+          "placeholder": "default is 20px"
+        }
       }
     }
   }

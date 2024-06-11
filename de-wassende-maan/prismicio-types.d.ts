@@ -1840,6 +1840,17 @@ interface SettingsDocumentData {
     | "montserrat",
     "filled"
   >;
+
+  /**
+   * Images Radius field in *settings*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 20px
+   * - **API ID Path**: settings.images_raduis
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  images_raduis: prismic.NumberField;
 }
 
 /**
@@ -3112,6 +3123,21 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceHeroDouble;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *HightLights → Primary*
+ */
+export interface HightLightsSliceDefaultPrimary {
+  /**
+   * Card border radius field in *HightLights → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 16px
+   * - **API ID Path**: hight_lights.primary.card_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  card_border_radius: prismic.NumberField;
+}
+
+/**
  * Primary content in *HightLights → Items*
  */
 export interface HightLightsSliceDefaultItem {
@@ -3187,7 +3213,7 @@ export interface HightLightsSliceDefaultItem {
  */
 export type HightLightsSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<HightLightsSliceDefaultPrimary>,
   Simplify<HightLightsSliceDefaultItem>
 >;
 
@@ -3204,6 +3230,16 @@ export interface HightLightsSliceHighlightsHeadingPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_title: prismic.KeyTextField;
+
+  /**
+   * Card border radius field in *HightLights → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 12px
+   * - **API ID Path**: hight_lights.primary.card_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  card_border_radius: prismic.NumberField;
 }
 
 /**
@@ -3267,6 +3303,16 @@ export interface HightLightsSliceHighlightsHeading3ColumnPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_title: prismic.KeyTextField;
+
+  /**
+   * Card border radius field in *HightLights → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: default is 12px
+   * - **API ID Path**: hight_lights.primary.card_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  card_border_radius: prismic.NumberField;
 }
 
 /**
@@ -4715,6 +4761,7 @@ declare module "@prismicio/client" {
       HeroSliceDefault,
       HeroSliceHeroDouble,
       HightLightsSlice,
+      HightLightsSliceDefaultPrimary,
       HightLightsSliceDefaultItem,
       HightLightsSliceHighlightsHeadingPrimary,
       HightLightsSliceHighlightsHeadingItem,

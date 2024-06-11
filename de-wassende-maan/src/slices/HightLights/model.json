@@ -11,7 +11,15 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
+      "primary": {
+        "card_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "Card border radius",
+            "placeholder": "default is 16px"
+          }
+        }
+      },
       "items": {
         "image": {
           "type": "Image",
@@ -86,6 +94,13 @@
             "label": "section title",
             "placeholder": ""
           }
+        },
+        "card_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "Card border radius",
+            "placeholder": "default is 12px"
+          }
         }
       },
       "items": {
@@ -129,6 +144,13 @@
           "config": {
             "label": "section title",
             "placeholder": ""
+          }
+        },
+        "card_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "Card border radius",
+            "placeholder": "default is 12px"
           }
         }
       },

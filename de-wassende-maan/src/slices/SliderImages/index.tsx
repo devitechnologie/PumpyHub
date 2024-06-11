@@ -39,7 +39,7 @@ const HomeSlider = ({ slice }: HomeSliderProps): JSX.Element => {
         {slice.items.map((item, index) => (
           <SwiperSlide key={index}>
             <div
-              className="2xl:h-[820px] xl:h-[740px] lg:h-[680px] md:h-[580px] sm:h-[500px] h-[420px] md:h-screen w-full relative"
+              className="2xl:h-[820px] xl:h-[740px] lg:h-[680px] md:h-[580px] sm:h-[500px] h-[420px] w-full relative"
             >
               <PrismicNextImage
                 field={item.slider_image}

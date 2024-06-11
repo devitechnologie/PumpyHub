@@ -25,6 +25,7 @@ const NewsList = async ({ slice, context }: NewsListProps): Promise<JSX.Element>
   const searchParams = context.searchParams as unknown as { search?: string, page?: string, category?: string, tag?: string }
   const client = createClient()
   const { t } = await initTranslations(getShortLocale(context.lang as string), ['*'], null, null)
+  const settings = await client.getSingle("settings", { lang: context.lang })
 
   const latestNews = await client.getAllByType("newspage",
     {
@@ -101,7 +102,7 @@ const NewsList = async ({ slice, context }: NewsListProps): Promise<JSX.Element>
       className="section-py flex flex-wrap gap-4 md:gap-0"
     >
       <div className="md:w-[70%]">
-        <NewsListSection news={paginatedNews.results} t={t} />
+        <NewsListSection news={paginatedNews.results} t={t} settings={settings} />
         <ListPagination
           totalPages={paginatedNews.total_pages}
           currentPage={paginatedNews.page}
@@ -109,7 +110,7 @@ const NewsList = async ({ slice, context }: NewsListProps): Promise<JSX.Element>
       </div>
       <aside className="md:w-[30%] md:pl-12 space-y-4 mt-4 sm:mt-0 overflow-hidden">
         <Search />
-        <SmallLatestNews news={latestNews} t={t} />
+        <SmallLatestNews news={latestNews} t={t} settings={settings} />
         <Divider />
         <Categories
           categories={categories}
@@ -127,7 +128,7 @@ const NewsList = async ({ slice, context }: NewsListProps): Promise<JSX.Element>
   )
 }
 
-const NewsListSection = ({ news, t }: { news: Content.NewspageDocument[], t: any }) => {
+const NewsListSection = ({ news, t, settings }: { news: Content.NewspageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div
       className="grid grid-cols-1 gap-8 w-full"
@@ -138,6 +139,7 @@ const NewsListSection = ({ news, t }: { news: Content.NewspageDocument[], t: any
             key={data.id}
             news={data}
             horizontal
+            borderRadius={settings.data.images_raduis || undefined}
           />
         ))
       }
@@ -160,7 +162,7 @@ const NewsListSection = ({ news, t }: { news: Content.NewspageDocument[], t: any
   )
 }
 
-const SmallLatestNews = ({ news, t }: { news: Content.NewspageDocument[], t: any }) => {
+const SmallLatestNews = ({ news, t, settings }: { news: Content.NewspageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div>
       <Heading
@@ -183,6 +185,7 @@ const SmallLatestNews = ({ news, t }: { news: Content.NewspageDocument[], t: any
               horizontal
               size="small"
               isLatest
+              borderRadius={settings.data.images_raduis || undefined}
             />
           ))
         }

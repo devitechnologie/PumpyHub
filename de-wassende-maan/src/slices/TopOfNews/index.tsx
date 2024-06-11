@@ -19,6 +19,7 @@ export type TopOfNewsProps = SliceComponentProps<Content.TopOfNewsSlice, { lang?
  */
 const TopOfNews = async ({ slice, context }: TopOfNewsProps): Promise<JSX.Element> => {
   const client = createClient();
+  const settings = await client.getSingle("settings", { lang: context.lang })
   // content relationship field
   const data = await Promise.all(
     slice.items.map((item) => {
@@ -51,6 +52,7 @@ const TopOfNews = async ({ slice, context }: TopOfNewsProps): Promise<JSX.Elemen
                 <NewsCard
                   key={data.id}
                   news={data}
+                  borderRadius={settings.data.images_raduis || undefined}
                 />
               )
             } else if (data && data.type === "recipespage") {
@@ -58,6 +60,7 @@ const TopOfNews = async ({ slice, context }: TopOfNewsProps): Promise<JSX.Elemen
                 <RecipesCard
                   key={data.id}
                   recipes={data}
+                  borderRadius={settings.data.images_raduis || undefined}
                 />
               )
             } else if (data && data.type === "jobspage") {
@@ -65,6 +68,7 @@ const TopOfNews = async ({ slice, context }: TopOfNewsProps): Promise<JSX.Elemen
                 <JobsCard
                   key={data.id}
                   jobs={data}
+                  borderRadius={settings.data.images_raduis || undefined}
                 />
               )
             } else if (data && data.type === "eventpage") {
@@ -72,6 +76,7 @@ const TopOfNews = async ({ slice, context }: TopOfNewsProps): Promise<JSX.Elemen
                 <EventsCard
                   key={data.id}
                   event={data}
+                  borderRadius={settings.data.images_raduis || undefined}
                 />
               )
             }

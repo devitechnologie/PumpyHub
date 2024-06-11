@@ -1,21 +1,25 @@
 import Heading from "@/components/ui/Heading";
 import Bounded from "@/components/wrappers/Bounded";
-import { Content } from "@prismicio/client";
+import { Content, ImageField, KeyTextField, RichTextField } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Badge from "@/components/ui/Badge";
 import Paragraph from "@/components/ui/Paragraph";
+import { createClient } from "@/prismicio";
 
 /**
  * Props for `ColsWithImageText`.
  */
 export type ColsWithImageTextProps =
-  SliceComponentProps<Content.ColsWithImageTextSlice>;
+  SliceComponentProps<Content.ColsWithImageTextSlice, { lang?: string }>;
 
 /**
  * Component for "ColsWithImageText" Slices.
  */
-const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
+const ColsWithImageText = async ({ slice, context }: ColsWithImageTextProps): Promise<JSX.Element> => {
+  const client = createClient()
+  const settings = await client.getSingle("settings", { lang: context.lang })
+
   return (
     <>
       {
@@ -48,6 +52,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
               >
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_1}
                   title={slice.primary.heading_col_1}
                   body={slice.primary.body_col_1}
@@ -55,6 +60,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 />
 
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_2}
                   title={slice.primary.heading_col_2}
                   body={slice.primary.body_col_2}
@@ -62,6 +68,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 />
 
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_3}
                   title={slice.primary.heading_col_3}
                   body={slice.primary.body_col_3}
@@ -103,6 +110,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
               >
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_1}
                   title={slice.primary.heading_col_1}
                   body={slice.primary.body_col_1}
@@ -110,6 +118,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 />
 
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_2}
                   title={slice.primary.heading_col_2}
                   body={slice.primary.body_col_2}
@@ -117,6 +126,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 />
 
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_3}
                   title={slice.primary.heading_col_3}
                   body={slice.primary.body_col_3}
@@ -124,6 +134,7 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
                 />
 
                 <ColsWithImageTextCard
+                  settings={settings}
                   image={slice.primary.image_col_4}
                   title={slice.primary.heading_col_4}
                   body={slice.primary.body_col_4}
@@ -139,13 +150,28 @@ const ColsWithImageText = ({ slice }: ColsWithImageTextProps): JSX.Element => {
   );
 };
 
-const ColsWithImageTextCard = ({ image, title, body, badge }: any) => {
+const ColsWithImageTextCard = ({
+  image,
+  title,
+  body,
+  badge,
+  settings,
+}: {
+  image: ImageField;
+  title: RichTextField;
+  body: RichTextField;
+  badge: KeyTextField;
+  settings: Content.SettingsDocument;
+}) => {
   return (
     <div
       className="block group space-y-4"
     >
       <div
-        className="aspect-[3/2] rounded-[20px] overflow-hidden"
+        style={{
+          borderRadius: settings.data.images_raduis || 20
+        }}
+        className="aspect-[3/2] overflow-hidden"
       >
         <PrismicNextImage
           field={image}

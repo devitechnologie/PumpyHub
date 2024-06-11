@@ -1,5 +1,6 @@
 import Heading from "@/components/ui/Heading";
 import Bounded from "@/components/wrappers/Bounded";
+import { createClient } from "@/prismicio";
 import { cn } from "@/utils/cn";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -10,12 +11,15 @@ import Link from "next/link";
  * Props for `TextWithImage`.
  */
 export type TextWithImageProps =
-  SliceComponentProps<Content.TextWithImageSlice>;
+  SliceComponentProps<Content.TextWithImageSlice, { lang?: string }>;
 
 /**
  * Component for "TextWithImage" Slices.
  */
-const TextWithImage = ({ slice }: TextWithImageProps): JSX.Element => {
+const TextWithImage = async ({ slice, context }: TextWithImageProps): Promise<JSX.Element> => {
+  const client = createClient()
+  const settings = await client.getSingle("settings", { lang: context.lang })
+
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -23,9 +27,12 @@ const TextWithImage = ({ slice }: TextWithImageProps): JSX.Element => {
       className="section-py overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center"
     >
       <div
+        style={{
+          borderRadius: settings.data.images_raduis || 20
+        }}
         className={
           cn(
-            "relative w-full aspect-video md:aspect-auto md:h-96 rounded-2xl overflow-hidden",
+            "relative w-full aspect-video md:aspect-auto md:h-96 overflow-hidden",
             slice.variation === "textWithImageReverse" && "md:order-2"
           )
         }

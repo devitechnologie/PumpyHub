@@ -15,6 +15,7 @@ export type LatestEventsProps = SliceComponentProps<Content.LatestEventsSlice, {
  */
 const LatestEvents = async ({ slice, context }: LatestEventsProps): Promise<JSX.Element> => {
   const client = createClient()
+  const settings = await client.getSingle("settings", { lang: context.lang })
   const events = await client.getAllByType("eventpage",
     {
       limit: 3,
@@ -53,6 +54,7 @@ const LatestEvents = async ({ slice, context }: LatestEventsProps): Promise<JSX.
                 key={data.id}
                 event={data}
                 isLatest
+                borderRadius={settings.data.images_raduis || undefined}
               />
             ))
           }

@@ -28,6 +28,7 @@ const RecipesList = async ({ slice, context }: RecipesListProps): Promise<JSX.El
 
   const client = createClient()
   const { t } = await initTranslations(getShortLocale(context.lang as string), ['*'], null, null)
+  const settings = await client.getSingle("settings", { lang: context.lang })
 
   const LatestRecipes = await client.getAllByType("recipespage",
     {
@@ -119,7 +120,7 @@ const RecipesList = async ({ slice, context }: RecipesListProps): Promise<JSX.El
       className="section-py flex flex-wrap gap-4 md:gap-0"
     >
       <div className="md:w-[70%]">
-        <RecipesListSection recipes={paginatedRecipes.results} t={t} />
+        <RecipesListSection recipes={paginatedRecipes.results} t={t} settings={settings} />
         <ListPagination
           totalPages={paginatedRecipes.total_pages}
           currentPage={paginatedRecipes.page}
@@ -127,7 +128,7 @@ const RecipesList = async ({ slice, context }: RecipesListProps): Promise<JSX.El
       </div>
       <aside className="md:w-[30%] md:pl-12 space-y-4 mt-4 sm:mt-0 overflow-hidden">
         <Search />
-        <SmallLatestRecipes recipes={LatestRecipes} t={t} />
+        <SmallLatestRecipes recipes={LatestRecipes} t={t} settings={settings} />
         <Divider />
         <Categories
           categories={categories}
@@ -151,7 +152,7 @@ const RecipesList = async ({ slice, context }: RecipesListProps): Promise<JSX.El
   );
 };
 
-const RecipesListSection = ({ recipes, t }: { recipes: Content.RecipespageDocument[], t: any }) => {
+const RecipesListSection = ({ recipes, t, settings }: { recipes: Content.RecipespageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div
       className="grid grid-cols-1 gap-4 md:gap-8 w-full"
@@ -162,6 +163,7 @@ const RecipesListSection = ({ recipes, t }: { recipes: Content.RecipespageDocume
             key={data.id}
             recipes={data}
             horizontal
+            borderRadius={settings.data.images_raduis || undefined}
           />
         ))
       }
@@ -184,7 +186,7 @@ const RecipesListSection = ({ recipes, t }: { recipes: Content.RecipespageDocume
   )
 }
 
-const SmallLatestRecipes = ({ recipes, t }: { recipes: Content.RecipespageDocument[], t: any }) => {
+const SmallLatestRecipes = ({ recipes, t, settings }: { recipes: Content.RecipespageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div>
       <Heading
@@ -207,6 +209,7 @@ const SmallLatestRecipes = ({ recipes, t }: { recipes: Content.RecipespageDocume
               horizontal
               size="small"
               isLatest
+              borderRadius={settings.data.images_raduis || undefined}
             />
           ))
         }

@@ -42,6 +42,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
             <HightLightsSliceCardV2
               key={index}
               item={item as Content.HightLightsSliceHighlightsHeading3ColumnItem}
+              slice={slice}
             />
           ))}
         </div>
@@ -103,6 +104,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
               >
                 <HightLightsHeadingSliceCard
                   item={item as Content.HightLightsSliceHighlightsHeadingItem}
+                  slice={slice}
                 />
               </SwiperSlide>
             ))}
@@ -148,6 +150,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
           <HightLightsSliceCard
             key={index}
             item={item as Content.HightLightsSliceDefaultItem}
+            slice={slice}
           />
         ))}
       </div>
@@ -155,12 +158,15 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
   );
 };
 
-const HightLightsSliceCardV2 = ({ item }: { item: Content.HightLightsSliceHighlightsHeading3ColumnItem }) => {
+const HightLightsSliceCardV2 = ({ item, slice }: { item: Content.HightLightsSliceHighlightsHeading3ColumnItem, slice: Content.HightLightsSlice }) => {
   return (
     <PrismicNextLink
       field={item.link}
+      style={{
+        borderRadius: slice.primary.card_border_radius || 12,
+      }}
       className={cn(
-        "group block overflow-hidden aspect-[16/12] rounded-xl z-0 relative duration-300 transition-all",
+        "group block overflow-hidden aspect-[16/12] z-0 relative duration-300 transition-all",
       )}
     >
       <div
@@ -202,13 +208,13 @@ const HightLightsSliceCardV2 = ({ item }: { item: Content.HightLightsSliceHighli
   )
 }
 
-const HightLightsSliceCard = ({ item }: { item: Content.HightLightsSliceDefaultItem }) => {
+const HightLightsSliceCard = ({ item, slice}: { item: Content.HightLightsSliceDefaultItem, slice: Content.HightLightsSlice }) => {
   return (
     <PrismicNextLink
       field={item.link}
-      style={{ backgroundColor: item.background_color || "#f3f4f6" }}
+      style={{ backgroundColor: item.background_color || "#f3f4f6", borderRadius: slice.primary.card_border_radius || 16}}
       className={cn(
-        "group relative min-h-[210px] overflow-hidden rounded-2xl p-8 flex justify-start items-center text-center z-10",
+        "group relative min-h-[210px] overflow-hidden p-8 flex justify-start items-center text-center z-10",
         item.text_alignment === "left" && "justify-start text-left",
         item.text_alignment === "right" && "justify-end",
         item.text_alignment === "center" && "justify-center text-center",
@@ -252,13 +258,16 @@ const HightLightsSliceCard = ({ item }: { item: Content.HightLightsSliceDefaultI
   )
 }
 
-const HightLightsHeadingSliceCard = ({ item }: { item: Content.HightLightsSliceHighlightsHeadingItem }) => {
+const HightLightsHeadingSliceCard = ({ item, slice }: { item: Content.HightLightsSliceHighlightsHeadingItem, slice: Content.HightLightsSlice }) => {
 
   return (
     <PrismicNextLink
       field={item.link}
+      style={{
+        borderRadius: slice.primary.card_border_radius || 12,
+      }}
       className={cn(
-        "group block overflow-hidden max-h-[300px] h-[210px] hover:drop-shadow-md rounded-xl shadow-sm z-0 relative border border-primary-green duration-300 hover:transform hover:-translate-y-2 transition-all",
+        "group block overflow-hidden max-h-[300px] h-[210px] hover:drop-shadow-md shadow-sm z-0 relative border border-primary-green duration-300 hover:transform hover:-translate-y-2 transition-all",
       )}
     >
       <div className="aspect-[16/10] z-0">

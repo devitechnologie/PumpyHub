@@ -25,6 +25,7 @@ const EventsList = async ({ slice, context }: EventsListProps): Promise<JSX.Elem
   const searchParams = context.searchParams as unknown as { search?: string, page?: string, category?: string, tag?: string }
   const client = createClient()
   const { t } = await initTranslations(getShortLocale(context.lang as string), ['*'], null, null)
+  const settings = await client.getSingle("settings", { lang: context.lang })
 
   const latestEvents = await client.getAllByType("eventpage",
     {
@@ -101,7 +102,7 @@ const EventsList = async ({ slice, context }: EventsListProps): Promise<JSX.Elem
       className="section-py flex flex-wrap gap-4 md:gap-0"
     >
       <div className="md:w-[70%]">
-        <EventsListSection events={paginatedEvents.results} t={t} />
+        <EventsListSection events={paginatedEvents.results} t={t} settings={settings} />
         <ListPagination
           totalPages={paginatedEvents.total_pages}
           currentPage={paginatedEvents.page}
@@ -109,7 +110,7 @@ const EventsList = async ({ slice, context }: EventsListProps): Promise<JSX.Elem
       </div>
       <aside className="md:w-[30%] md:pl-12 space-y-4 mt-4 sm:mt-0 overflow-hidden">
         <Search />
-        <SmallLatestEvents events={latestEvents} t={t} />
+        <SmallLatestEvents events={latestEvents} t={t} settings={settings} />
         <Divider />
         <Categories
           categories={categories}
@@ -127,7 +128,7 @@ const EventsList = async ({ slice, context }: EventsListProps): Promise<JSX.Elem
   );
 };
 
-const EventsListSection = ({ events, t }: { events: Content.EventpageDocument[], t: any }) => {
+const EventsListSection = ({ events, t, settings}: { events: Content.EventpageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div
       className="grid grid-cols-1 gap-4 md:gap-8 w-full"
@@ -138,6 +139,7 @@ const EventsListSection = ({ events, t }: { events: Content.EventpageDocument[],
             key={data.id}
             event={data}
             horizontal
+            borderRadius={settings.data.images_raduis || undefined}
           />
         ))
       }
@@ -160,7 +162,7 @@ const EventsListSection = ({ events, t }: { events: Content.EventpageDocument[],
   )
 }
 
-const SmallLatestEvents = ({ events, t }: { events: Content.EventpageDocument[], t: any }) => {
+const SmallLatestEvents = ({ events, t, settings }: { events: Content.EventpageDocument[], t: any, settings: Content.SettingsDocument }) => {
   return (
     <div>
       <Heading
@@ -183,6 +185,7 @@ const SmallLatestEvents = ({ events, t }: { events: Content.EventpageDocument[],
               horizontal
               size="small"
               isLatest
+              borderRadius={settings.data.images_raduis || undefined}
             />
           ))
         }

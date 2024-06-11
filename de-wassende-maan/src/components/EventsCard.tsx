@@ -12,19 +12,20 @@ import Paragraph from "@/components/ui/Paragraph";
 import Heading from "./ui/Heading";
 import { EventpageDocument } from "../../prismicio-types";
 import Button from "./ui/Button";
-import { listEventsPaths } from "@/utils/routesData";
+import { TLocals, listEventsPaths } from "@/utils/routesData";
 
 type EventsCardProps = {
   event: EventpageDocument;
   horizontal?: boolean
   size?: 'small'
   isLatest?: boolean
+  borderRadius?: number
 }
 
-const EventsCard = ({ event, horizontal, size, isLatest }: EventsCardProps) => {
+const EventsCard = ({ event, horizontal, size, isLatest, borderRadius = 20 }: EventsCardProps) => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
-  const path = listEventsPaths[lang as 'en' | 'fr' | 'nl']
+  const path = listEventsPaths[lang as TLocals]
 
   if (horizontal && size === 'small') {
     return (
@@ -33,7 +34,8 @@ const EventsCard = ({ event, horizontal, size, isLatest }: EventsCardProps) => {
         className="flex items-center gap-2 group"
       >
         <div
-          className="aspect-square h-[100px] min-w-[100px] rounded-[20px] overflow-hidden"
+          style={{ borderRadius }}
+          className="aspect-square h-[100px] min-w-[100px] overflow-hidden"
         >
           <PrismicNextImage
             field={event.data.image}
@@ -75,7 +77,8 @@ const EventsCard = ({ event, horizontal, size, isLatest }: EventsCardProps) => {
         className="block space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:space-x-8 group sm:place-items-center"
       >
         <div
-          className="aspect-[3/2] sm:aspect-video sm:h-[290px] sm:w-full rounded-[20px] overflow-hidden"
+          style={{ borderRadius }}
+          className="aspect-[3/2] sm:aspect-video sm:h-[290px] sm:w-full overflow-hidden"
         >
           <PrismicNextImage
             field={event.data.image}
@@ -128,7 +131,8 @@ const EventsCard = ({ event, horizontal, size, isLatest }: EventsCardProps) => {
       className="block group space-y-4"
     >
       <div
-        className="aspect-[3/2] rounded-[20px] overflow-hidden"
+        style={{ borderRadius }}
+        className="aspect-[3/2] overflow-hidden"
       >
         <PrismicNextImage
           field={event.data.image}

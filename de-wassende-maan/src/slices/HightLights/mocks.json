@@ -2,7 +2,13 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"card_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "33",
+				"type": "Number"
+			}
+		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
@@ -93,6 +99,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "become",
 				"type": "Text"
+			},
+			"card_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "67",
+				"type": "Number"
 			}
 		},
 		"items": [
@@ -161,6 +172,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "coast",
 				"type": "Text"
+			},
+			"card_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "16",
+				"type": "Number"
 			}
 		},
 		"items": [

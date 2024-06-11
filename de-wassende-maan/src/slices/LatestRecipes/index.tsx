@@ -16,6 +16,7 @@ export type LatestRecipesProps =
  */
 const LatestRecipes = async ({ slice, context }: LatestRecipesProps): Promise<JSX.Element> => {
   const client = createClient()
+  const settings = await client.getSingle("settings", { lang: context.lang })
   const recipes = await client.getAllByType("recipespage",
     {
       limit: 3,
@@ -54,6 +55,7 @@ const LatestRecipes = async ({ slice, context }: LatestRecipesProps): Promise<JS
                 key={data.id}
                 recipes={data}
                 isLatest
+                borderRadius={settings.data.images_raduis || undefined}
               />
             ))
           }

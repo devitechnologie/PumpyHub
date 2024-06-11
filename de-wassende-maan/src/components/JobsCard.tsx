@@ -12,19 +12,20 @@ import { fr, nl, enUS } from 'date-fns/locale'
 import { useTranslation } from "react-i18next";
 import { PrismicNextImage } from "@prismicio/next";
 import Button from "./ui/Button";
-import { listJobsPaths } from "@/utils/routesData";
+import { TLocals, listJobsPaths } from "@/utils/routesData";
 
 type JobsCardProps = {
   jobs: JobspageDocument
   horizontal?: boolean
   size?: 'small'
   isLatest?: boolean
+  borderRadius?: number
 }
 
-const JobsCard = ({ jobs, horizontal, size, isLatest }: JobsCardProps) => {
+const JobsCard = ({ jobs, horizontal, size, isLatest, borderRadius = 20 }: JobsCardProps) => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
-  const path = listJobsPaths[lang as 'en' | 'fr' | 'nl']
+  const path = listJobsPaths[lang as TLocals]
 
   if (horizontal && size === 'small') {
     return (
@@ -33,7 +34,8 @@ const JobsCard = ({ jobs, horizontal, size, isLatest }: JobsCardProps) => {
         className="flex items-center gap-2 group"
       >
         <div
-          className="aspect-square h-[100px] min-w-[100px] rounded-[20px] overflow-hidden"
+          style={{ borderRadius }}
+          className="aspect-square h-[100px] min-w-[100px] overflow-hidden"
         >
           <PrismicNextImage
             field={jobs.data.image}
@@ -77,7 +79,8 @@ const JobsCard = ({ jobs, horizontal, size, isLatest }: JobsCardProps) => {
         className="block space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:space-x-8 group sm:place-items-center"
       >
         <div
-          className="aspect-[3/2] sm:aspect-video sm:h-[290px] sm:w-full rounded-[20px] overflow-hidden"
+          style={{ borderRadius }}
+          className="aspect-[3/2] sm:aspect-video sm:h-[290px] sm:w-full overflow-hidden"
         >
           <PrismicNextImage
             field={jobs.data.image}
@@ -133,7 +136,8 @@ const JobsCard = ({ jobs, horizontal, size, isLatest }: JobsCardProps) => {
       className="block group space-y-4"
     >
       <div
-        className="aspect-[3/2] rounded-[20px] overflow-hidden"
+        style={{ borderRadius }}
+        className="aspect-[3/2] overflow-hidden"
       >
         <PrismicNextImage
           field={jobs.data.image}
