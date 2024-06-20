@@ -38,7 +38,7 @@ const TopOfNews = async ({ slice, context }: TopOfNewsProps): Promise<JSX.Elemen
       <Heading
         as="h2"
         variant="h1"
-        className="mb-8 md:mb-12 text-center text-primary-green-dark-dwm capitalize"
+        className="mb-8 md:mb-12 text-center text-heading-secondary capitalize"
       >
         {slice.primary.heading}
       </Heading>

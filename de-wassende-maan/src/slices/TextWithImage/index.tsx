@@ -51,7 +51,7 @@ const TextWithImage = async ({ slice, context }: TextWithImageProps): Promise<JS
               <Heading
                 as="h2"
                 variant="h2"
-                className="text-primary-green-dark-dwm mb-4"
+                className="text-heading-secondary mb-4"
               >
                 {children}
               </Heading>
@@ -72,7 +72,7 @@ const TextWithImage = async ({ slice, context }: TextWithImageProps): Promise<JS
               return (
                 <Link
                   href={node.data.url || "#"}
-                  className="text-primary-green hover:underline"
+                  className="text-link-hover-2 hover:underline"
                 >
                   {children}
                 </Link>

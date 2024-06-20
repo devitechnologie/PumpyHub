@@ -95,7 +95,7 @@ const ProductCard = ({ num }: ProductCardProps) => {
         </Heading>
         <div className="flex items-center gap-2 select-none">
           <span
-            className="text-primary-green-light-dwm font-medium text-lg"
+            className="text-primary-light font-medium text-lg"
           >
             $12.99
           </span>

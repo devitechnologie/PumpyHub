@@ -41,7 +41,7 @@ const ColsWithImageText = async ({ slice, context }: ColsWithImageTextProps): Pr
                     <Heading
                       as="h2"
                       variant="h1"
-                      className="mb-8 md:mb-12 text-center text-primary-green-dark-dwm capitalize"
+                      className="mb-8 md:mb-12 text-center text-heading-secondary capitalize"
                     >
                       {children}
                     </Heading>
@@ -99,7 +99,7 @@ const ColsWithImageText = async ({ slice, context }: ColsWithImageTextProps): Pr
                     <Heading
                       as="h2"
                       variant="h1"
-                      className="mb-8 md:mb-12 text-center text-primary-green-dark-dwm capitalize"
+                      className="mb-8 md:mb-12 text-center text-heading-secondary capitalize"
                     >
                       {children}
                     </Heading>

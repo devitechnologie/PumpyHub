@@ -11,7 +11,7 @@ import { PrismicNextLink } from "@prismicio/next"
 const components: JSXMapSerializer = {
   paragraph: ({ children }) => (
     <Paragraph
-      className="mb-4 text-primary-green-dark-dwm"
+      className="mb-4 text-primary-dark"
     >
       {children}
     </Paragraph>
@@ -19,7 +19,7 @@ const components: JSXMapSerializer = {
   hyperlink: ({ children, node }) => (
     <PrismicNextLink
       field={node.data}
-      className="text-primary-green-dark-dwm hover:underline cursor-pointer hover:text-primary-green transition-colors duration-300"
+      className="text-primary-dark hover:underline cursor-pointer hover:text-primary transition-colors duration-300"
     >
       {children}
     </PrismicNextLink>

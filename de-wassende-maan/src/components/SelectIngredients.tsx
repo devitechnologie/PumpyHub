@@ -28,7 +28,7 @@ const SelectIngredients = ({ idIngredients, name, isSelected }: SelectIngredient
       className={
         cn(
           "capitalize font-medium",
-          isSelected && "bg-primary-green text-white"
+          isSelected && "bg-primary text-white"
         )
       }
       onClick={onSelectedIngredients}

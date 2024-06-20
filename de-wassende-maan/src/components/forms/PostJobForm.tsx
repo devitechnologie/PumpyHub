@@ -176,7 +176,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
         </div>
         <div className="col-span-2">
           <label
-            className="block text-sm font-medium text-primary-green-dark-dwm mb-2"
+            className="block text-sm font-medium text-primary-dark mb-2"
           >
             Add your resume* (PDF, DOC, DOCX)
           </label>
@@ -197,7 +197,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
                   handleChange={(files: File) => field.onChange(files)}
                 >
                   <div
-                    className="flex items-center gap-3 border border-dashed border-primary-green-dark-dwm rounded-xl p-1 pr-3 cursor-pointer"
+                    className="flex items-center gap-3 border border-dashed border-primary-dark rounded-xl p-1 pr-3 cursor-pointer"
                   >
                     <Button
                       variant="outlined"
@@ -235,7 +235,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
               {...register('file', { required: 'This field is required' })}
             >
               <div
-                className="flex items-center gap-3 border border-dashed border-primary-green-dark-dwm rounded-xl p-1 pr-3 cursor-pointer"
+                className="flex items-center gap-3 border border-dashed border-primary-dark rounded-xl p-1 pr-3 cursor-pointer"
               >
                 <Button
                   variant="outlined"

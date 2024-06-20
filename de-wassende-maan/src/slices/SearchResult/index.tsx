@@ -55,7 +55,7 @@ const SearchByText = () => {
       <Heading
         as="h2"
         variant="h2"
-        className="text-primary-green-dark-dwm"
+        className="text-primary-dark"
       >
         Found 170 results for &quot;Search Query&quot;
       </Heading>
@@ -75,7 +75,7 @@ const SearchHeader = () => {
     <div className="flex items-center justify-between mb-2">
       <Paragraph
         size="lg"
-        className="text-primary-green-dark-dwm font-semibold"
+        className="text-primary-dark font-semibold"
       >
         Search Results
       </Paragraph>

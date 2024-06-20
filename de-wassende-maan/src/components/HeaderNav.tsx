@@ -52,7 +52,7 @@ const HeaderNav = ({ data }: HeaderNavProps) => {
       className={cn(
         "transition-all duration-300 bg-white h-[130px]",
         collapsed && "h-16",
-        y && y > 0 && "shadow-green-bottom"
+        y && y > 0 && "shadow-bottom"
       )}
     >
       <div
@@ -161,7 +161,7 @@ const HeaderNav = ({ data }: HeaderNavProps) => {
               <SearchBar />
               {/* line */}
               <div
-                className="w-[1px] h-6 bg-primary-green"
+                className="w-[1px] h-6 bg-primary"
               />
               <div
                 className="text-2xl cursor-pointer text-slate-950"

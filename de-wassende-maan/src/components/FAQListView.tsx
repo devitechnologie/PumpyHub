@@ -30,7 +30,7 @@ const components: JSXMapSerializer = {
     return (
       <PrismicNextLink
         field={node.data}
-        className="text-primary-green hover:underline"
+        className="text-link-hover-2 hover:underline"
       >
         {children}
       </PrismicNextLink>

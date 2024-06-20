@@ -26,7 +26,7 @@ const Newsletter = ({ slice }: NewsletterProps): JSX.Element => {
         <Heading
           as="h2"
           variant="h1"
-          className="max-w-[500px] mx-auto capitalize text-primary-green-dark-dwm"
+          className="max-w-[500px] mx-auto capitalize text-heading-secondary"
         >
           {slice.primary.heading}
         </Heading>
@@ -35,7 +35,7 @@ const Newsletter = ({ slice }: NewsletterProps): JSX.Element => {
           components={{
             paragraph: ({ children }) => (
               <p
-                className="text-lg leading-relaxed mb-4 max-w-[500px] mx-auto text-primary-green-dark-dwm"
+                className="text-lg leading-relaxed mb-4 max-w-[500px] mx-auto text-heading-secondary"
               >
                 {children}
               </p>

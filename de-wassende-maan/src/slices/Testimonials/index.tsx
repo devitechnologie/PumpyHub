@@ -38,7 +38,7 @@ const Testimonials = async ({ slice, context }: TestimonialsProps): Promise<JSX.
         <Heading
           as="h2"
           variant="h1"
-          className="text-primary-green-dark-dwm capitalize"
+          className="text-heading-secondary capitalize"
         >
           {slice.primary.heading}
         </Heading>

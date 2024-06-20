@@ -31,7 +31,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
         <Heading
           as="h2"
           variant="h1"
-          className="mb-8 md:mb-12 text-center text-primary-green-dark-dwm capitalize"
+          className="mb-8 md:mb-12 text-center text-heading-secondary capitalize"
         >
           {slice.primary.section_title}
         </Heading>
@@ -60,7 +60,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
         <Heading
           as="h2"
           variant="h1"
-          className="mb-8 md:mb-12 text-center text-primary-green-dark-dwm capitalize"
+          className="mb-8 md:mb-12 text-center text-heading-secondary capitalize"
         >
           {slice.primary.section_title}
         </Heading>
@@ -115,7 +115,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
           >
             <Button
               variant="none"
-              className="swipe-button-prev bg-primary-green hover:bg-opacity-85 text-xl text-white p-2 rounded-full cursor-pointer"
+              className="swipe-button-prev bg-primary hover:bg-opacity-85 text-xl text-white p-2 rounded-full cursor-pointer"
             >
               <IoIosArrowBack />
             </Button>
@@ -125,7 +125,7 @@ const HightLights = ({ slice }: HightLightsProps): JSX.Element => {
           >
             <Button
               variant="none"
-              className="swipe-button-next bg-primary-green hover:bg-opacity-85 text-xl text-white p-2 rounded-full cursor-pointer"
+              className="swipe-button-next bg-primary hover:bg-opacity-85 text-xl text-white p-2 rounded-full cursor-pointer"
             >
               <IoIosArrowForward />
             </Button>
@@ -267,7 +267,7 @@ const HightLightsHeadingSliceCard = ({ item, slice }: { item: Content.HightLight
         borderRadius: slice.primary.card_border_radius || 12,
       }}
       className={cn(
-        "group block overflow-hidden max-h-[300px] h-[210px] hover:drop-shadow-md shadow-sm z-0 relative border border-primary-green duration-300 hover:transform hover:-translate-y-2 transition-all",
+        "group block overflow-hidden max-h-[300px] h-[210px] hover:drop-shadow-md shadow-sm z-0 relative border border-primary duration-300 hover:transform hover:-translate-y-2 transition-all",
       )}
     >
       <div className="aspect-[16/10] z-0">
@@ -278,7 +278,7 @@ const HightLightsHeadingSliceCard = ({ item, slice }: { item: Content.HightLight
         />
       </div>
       <div
-        className="px-6 py-3 z-10 bg-primary-green-light-dwm absolute bottom-0 left-0 right-0 text-white transition-all duration-300 group-hover:bg-primary-green-dark-dwm"
+        className="px-6 py-3 z-10 bg-primary absolute bottom-0 left-0 right-0 text-white transition-all duration-300 group-hover:bg-heading-secondary"
       >
         <PrismicRichText
           field={item.text}

@@ -25,7 +25,7 @@ const Features = ({ slice }: FeaturesProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-primary-surface"
+      className="bg-footer-bg"
     >
       <Bounded
         as="div"

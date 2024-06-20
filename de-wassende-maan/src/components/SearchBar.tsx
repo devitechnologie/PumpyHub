@@ -25,7 +25,7 @@ const SearchBar = ({ mobile, isInLine }: SearchBarProps) => {
           <Input
             variant="secondary"
             placeholder="Search for products"
-            className="w-full rounded-xl py-3 border border-gray-300 focus:border-primary-green-dark-dwm duration-300 focus:ring-0"
+            className="w-full rounded-xl py-3 border border-gray-300 focus:border-primary-dark duration-300 focus:ring-0"
           />
           <div className="h-full absolute right-0 top-0 p-1">
             <Button
@@ -46,7 +46,7 @@ const SearchBar = ({ mobile, isInLine }: SearchBarProps) => {
         <input
           type="text"
           placeholder="What are you looking for?"
-          className="w-full pl-9 pr-4 py-1.5 border border-gray-300 rounded-md outline-none focus:border-primary-green"
+          className="w-full pl-9 pr-4 py-1.5 border border-gray-300 rounded-md outline-none focus:border-primary"
         />
         <Button
           variant="none"
@@ -86,10 +86,10 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
         <input
           type="text"
           placeholder="What are you looking for?"
-          className="w-full pr-9 pl-4 py-3 border border-gray-300 rounded-md outline-none focus:border-primary-green"
+          className="w-full pr-9 pl-4 py-3 border border-gray-300 rounded-md outline-none focus:border-input-focus-primary"
         />
         <Button
-          className="text-2xl bg-primary-green rounded-md p-2 text-white hover:bg-opacity-80 transition-all cursor-pointer absolute top-1/2 right-2 transform -translate-y-1/2"
+          className="text-2xl rounded-md p-2 text-white bg-button-primary-hover hover:bg-opacity-80 transition-all cursor-pointer absolute top-1/2 right-2 transform -translate-y-1/2"
         >
           <div
 
@@ -130,7 +130,7 @@ const SearchBadge = ({ text }: { text: string }) => {
   return (
     <Button
       variant="none"
-      className="bg-gray-100 text-slate-950 rounded-full px-4 py-2 text-sm hover:bg-primary-green hover:text-white transition-all duration-300"
+      className="bg-gray-100 text-slate-950 rounded-full px-4 py-2 text-sm hover:bg-badge-success hover:text-white transition-all duration-300"
     >
       <p>
         {text}

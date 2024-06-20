@@ -75,7 +75,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: TestimonialDocument }) 
         </div>
         <Paragraph
           size="lg"
-          className="text-primary-green-dark-dwm flex-1"
+          className="text-paragraph-tertiary flex-1"
         >
           {testimonial.data.comment}
         </Paragraph>
@@ -95,7 +95,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: TestimonialDocument }) 
         </div>
         <div>
           <Paragraph
-            className="text-primary-green-dark-dwm font-semibold"
+            className="text-paragraph-tertiary font-semibold"
           >
             {testimonial.data.full_name}
           </Paragraph>

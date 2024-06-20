@@ -48,7 +48,7 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
         <Heading
           as="h2"
           variant="h1"
-          className="mb-4 text-primary-green-dark-dwm"
+          className="mb-4 text-heading-secondary"
         >
           Send us a message
         </Heading>

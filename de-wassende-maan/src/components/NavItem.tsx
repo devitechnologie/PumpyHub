@@ -55,7 +55,7 @@ const NavItem = ({ slice, closeNav }: NavItemProps) => {
         }}
       >
         <span
-          className="text-sm uppercase font-semibold cursor-pointer"
+          className="text-sm uppercase font-semibold cursor-pointer text-link-text"
         >
           {
             slice.primary.name_of_the_link
@@ -63,7 +63,7 @@ const NavItem = ({ slice, closeNav }: NavItemProps) => {
         </span>
         {/* line */}
         <div
-          className="absolute hidden md:block bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-primary-green"
+          className="absolute hidden md:block bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300 h-0.5 bg-link-underlined"
         />
         {
           slice.items.length > 0 && (
@@ -84,7 +84,7 @@ const NavItem = ({ slice, closeNav }: NavItemProps) => {
             transition={{ duration: 0.3 }}
             className="absolute z-50 w-full right-0 top-full pt-4 left-0"
           >
-            <div className="bg-white p-4 space-y-4 shadow-green-bottom-right rounded-b-md z-10 w-max px-6">
+            <div className="bg-white p-4 space-y-4 shadow-bottom-right rounded-b-md z-10 w-max px-6">
               {/* items */}
               {
                 slice.items.map((item, index) => (
@@ -97,7 +97,7 @@ const NavItem = ({ slice, closeNav }: NavItemProps) => {
                     className="flex flex-col justify-center items-start relative w-fit"
                   >
                     <span
-                      className="text-sm uppercase font-semibold cursor-pointer peer"
+                      className="text-sm uppercase font-semibold cursor-pointer peer text-link-text"
                     >
                       {
                         item.child_name
@@ -105,7 +105,7 @@ const NavItem = ({ slice, closeNav }: NavItemProps) => {
                     </span>
                     {/* line */}
                     <div
-                      className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-primary-green"
+                      className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-link-underlined"
                     />
                   </PrismicNextLink>
                 ))
@@ -161,7 +161,7 @@ const NavItem = ({ slice, closeNav }: NavItemProps) => {
                     </span>
                     {/* line */}
                     <div
-                      className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-primary-green"
+                      className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-primary"
                     />
                   </PrismicNextLink>
                 ))

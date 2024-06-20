@@ -175,7 +175,7 @@ const RecipesListSection = ({ recipes, t, settings }: { recipes: Content.Recipes
             <Heading
               as="h4"
               variant="h4"
-              className="text-primary-green-dark-dwm"
+              className="text-heading-secondary"
             >
               {t('no_recipes_found')}
             </Heading>
@@ -192,7 +192,7 @@ const SmallLatestRecipes = ({ recipes, t, settings }: { recipes: Content.Recipes
       <Heading
         as="h3"
         variant="h3"
-        className="text-primary-green-dark-dwm"
+        className="text-heading-secondary"
       >
         {
           t('latest_recipes')
@@ -235,7 +235,7 @@ const Categories = ({
       <Heading
         as="h3"
         variant="h3"
-        className="text-primary-green-dark-dwm"
+        className="text-heading-secondary"
       >
         {
           t('recipes_period')
@@ -274,7 +274,7 @@ const Ingredients = ({
       <Heading
         as="h3"
         variant="h3"
-        className="text-primary-green-dark-dwm"
+        className="text-heading-secondary"
       >
         {
           t('ingredients')

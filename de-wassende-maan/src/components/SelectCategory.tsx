@@ -29,7 +29,7 @@ const SelectCategory = ({ idCategory, name, count, isSelected }: SelectCategoryP
       className={
         cn(
           "text-base text-gray-500 flex items-center justify-between w-full font-medium",
-          isSelected ? "text-primary-green" : "hover:text-primary-green"
+          isSelected ? "text-primary" : "hover:text-primary"
         )
       }
     >

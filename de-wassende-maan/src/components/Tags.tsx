@@ -26,7 +26,7 @@ const Tags = ({ tags, selectedTag }: TagsProps) => {
       <Heading
         as="h3"
         variant="h3"
-        className="text-primary-green-dark-dwm"
+        className="text-heading-secondary"
       >
         Tags
       </Heading>
@@ -41,8 +41,8 @@ const Tags = ({ tags, selectedTag }: TagsProps) => {
               variant="none"
               className={
                 cn(
-                  "bg-primary-white hover:border-transparent border border-gray-300 text-primary-black rounded-full px-4 py-1.5 text-sm hover:bg-primary-green hover:text-white transition-all duration-300",
-                  selectedTag === tag ? "bg-primary-green text-white border-transparent" : ""
+                  "bg-primary-white hover:border-transparent border border-gray-300 text-primary-black rounded-full px-4 py-1.5 text-sm hover:bg-primary hover:text-white transition-all duration-300",
+                  selectedTag === tag ? "bg-primary text-white border-transparent" : ""
                 )
               }
             >

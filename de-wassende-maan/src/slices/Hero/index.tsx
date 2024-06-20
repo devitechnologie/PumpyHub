@@ -110,7 +110,7 @@ const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink
           variant="h1"
           className={
             cn(
-              textColor === "dark" && "text-primary-green-dark-dwm",
+              textColor === "dark" && "text-heading-secondary",
               textColor === "light" && "text-white",
               textAlign === "center" && "text-center",
               textAlign === "left" && "text-left",
@@ -128,7 +128,7 @@ const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink
                 className={
                   cn(
                     "text-lg mt-4 max-w-[600px]",
-                    textColor === "dark" && "text-primary-green-dark-dwm",
+                    textColor === "dark" && "text-heading-secondary",
                     textColor === "light" && "text-white",
                   )
                 }

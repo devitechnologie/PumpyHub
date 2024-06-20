@@ -20,7 +20,7 @@ const Paragraph = ({ children, className, size, ...props }: ParagraphProps) => {
 }
 
 const paragraphVariants = cva(
-  'text-primary-black',
+  'text-paragraph-primary',
   {
     variants: {
       size: {

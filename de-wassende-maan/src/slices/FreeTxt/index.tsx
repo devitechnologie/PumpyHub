@@ -24,7 +24,7 @@ const headingComponents: JSXMapSerializer = {
     <Heading
       as="h2"
       variant="h3"
-      className="md:mb-4 mb-2 text-primary-green-dark-dwm"
+      className="md:mb-4 mb-2 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -33,7 +33,7 @@ const headingComponents: JSXMapSerializer = {
     <Heading
       as="h3"
       variant="h4"
-      className="md:mb-2 mb-2 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -42,7 +42,7 @@ const headingComponents: JSXMapSerializer = {
     <Heading
       as="h4"
       variant="h5"
-      className="md:mb-2 mb-2 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -51,7 +51,7 @@ const headingComponents: JSXMapSerializer = {
     <Heading
       as="h5"
       variant="h6"
-      className="md:mb-2 mb-2 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -72,7 +72,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       variant="h3"
-      className="text-primary-green-dark-dwm"
+      className="text-heading-secondary"
     >
       {children}
     </Heading>
@@ -81,7 +81,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h3"
       variant="h4"
-      className="text-primary-green-dark-dwm"
+      className="text-heading-secondary"
     >
       {children}
     </Heading>
@@ -90,7 +90,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h4"
       variant="h5"
-      className="text-primary-green-dark-dwm"
+      className="text-heading-secondary"
     >
       {children}
     </Heading>
@@ -99,7 +99,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h5"
       variant="h6"
-      className="text-primary-green-dark-dwm"
+      className="text-heading-secondary"
     >
       {children}
     </Heading>
@@ -108,7 +108,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h6"
       variant="h6"
-      className="text-primary-green-dark-dwm"
+      className="text-heading-secondary"
     >
       {children}
     </Heading>
@@ -124,7 +124,7 @@ const components: JSXMapSerializer = {
     return (
       <PrismicNextLink
         field={node.data}
-        className="text-primary-green hover:underline"
+        className="text-primary hover:underline"
       >
         {children}
       </PrismicNextLink>

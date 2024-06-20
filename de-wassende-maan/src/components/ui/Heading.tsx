@@ -19,7 +19,7 @@ const Heading = ({ as = 'h2', variant = 'h2', className, ...props }: HeadingProp
 }
 
 const headingVariants = cva(
-  'font-bold text-primary-black',
+  'font-bold text-heading-primary',
   {
     variants: {
       variant: {

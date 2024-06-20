@@ -31,7 +31,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
         className={
           cn(
             "relative text-white text-center py-10 md:py-[50px] px-8 rounded-3xl space-y-4 z-0",
-            slice.primary.color === "dark" ? "bg-primary-green-dark-dwm" : "bg-primary-lime"
+            slice.primary.color === "dark" ? "bg-call-to-action-dark" : "bg-call-to-action-light"
           )
         }
       >
@@ -41,7 +41,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
           className={
             cn(
               "max-w-[500px] mx-auto capitalize",
-              slice.primary.color === "dark" ? "text-white" : "text-primary-green-dark-dwm"
+              slice.primary.color === "dark" ? "text-white" : "text-call-to-action-dark"
             )
           }
         >
@@ -55,7 +55,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
                 className={
                   cn(
                     "text-lg leading-relaxed mb-4 max-w-[500px] mx-auto",
-                    slice.primary.color === "dark" ? "text-white" : "text-primary-green-dark-dwm"
+                    slice.primary.color === "dark" ? "text-white" : "text-call-to-action-dark"
                   )
                 }
               >
@@ -66,7 +66,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
               return (
                 <Link
                   href={node.data.url || "#"}
-                  className="text-primary-green hover:underline"
+                  className="text-link-underlined hover:underline"
                 >
                   {children}
                 </Link>

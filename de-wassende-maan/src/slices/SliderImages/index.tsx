@@ -76,7 +76,7 @@ const HomeSlider = ({ slice }: HomeSliderProps): JSX.Element => {
                     }}
                     className={
                       cn(
-                        "px-8 py-3 mt-8 bg-primary-black text-primary-white hover:bg-primary-green transition-all drop-shadow-lg duration-300 font-medium",
+                        "px-8 py-3 mt-8 bg-primary-black text-white hover:bg-button-primary-hover transition-all drop-shadow-lg duration-300 font-medium",
                         item.text_color === "light" && "bg-white text-primary-black hover:bg-primary-black hover:text-white")
                     }
                     field={item.button_link}

@@ -13,7 +13,7 @@ import NewsletterForm from "./forms/NewsletterForm"
 const components: JSXMapSerializer = {
   paragraph: ({ children }) => (
     <Paragraph
-      className="mb-4 text-sm text-primary-green-dark-dwm"
+      className="mb-4 text-sm text-footer-text"
     >
       {children}
     </Paragraph>
@@ -21,7 +21,7 @@ const components: JSXMapSerializer = {
   hyperlink: ({ children, node }) => (
     <PrismicNextLink
       field={node.data}
-      className="text-primary-green-dark-dwm hover:underline cursor-pointer hover:text-primary-green transition-colors duration-300"
+      className="text-footer-link-up hover:underline cursor-pointer hover:text-footer-link-down transition-colors duration-300"
     >
       {children}
     </PrismicNextLink>
@@ -38,7 +38,7 @@ const Footer = async ({ locale }: FooterProps) => {
   const { t } = await initTranslations(locale, ['*'], null, null)
 
   return (
-    <footer className="bg-primary-surface">
+    <footer className="bg-footer-bg">
       <div className={`app-container pt-8 lg:pt-16`}>
         <div>
           <div
@@ -58,7 +58,7 @@ const Footer = async ({ locale }: FooterProps) => {
               </Link>
             </div>
             <div className="md:col-span-2">
-              <h2 className="mb-4 text-sm font-bold text-primary-green-dark-dwm uppercase">
+              <h2 className="mb-4 text-sm font-bold text-footer-text uppercase">
                 {t("informations")}
               </h2>
               <ul className="font-medium text-sm text-primary-black">
@@ -80,7 +80,7 @@ const Footer = async ({ locale }: FooterProps) => {
                           </span>
                           {/* line */}
                           <div
-                            className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-primary-green"
+                            className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-link-underlined"
                           />
                         </PrismicNextLink>
                       </li>
@@ -91,7 +91,7 @@ const Footer = async ({ locale }: FooterProps) => {
             </div>
 
             <div className="md:col-span-2">
-              <h2 className="mb-4 text-sm font-bold text-primary-green-dark-dwm uppercase">
+              <h2 className="mb-4 text-sm font-bold text-footer-text uppercase">
                 {t("liens_rapides")}
               </h2>
               <ul className="font-medium text-sm text-primary-black">
@@ -113,7 +113,7 @@ const Footer = async ({ locale }: FooterProps) => {
                           </span>
                           {/* line */}
                           <div
-                            className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-primary-green"
+                            className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-link-underlined"
                           />
                         </PrismicNextLink>
                       </li>
@@ -124,7 +124,7 @@ const Footer = async ({ locale }: FooterProps) => {
             </div>
 
             <div className="md:col-span-2">
-              <h2 className="mb-4 text-sm font-bold text-primary-green-dark-dwm uppercase">
+              <h2 className="mb-4 text-sm font-bold text-footer-text uppercase">
                 {t("service_client")}
               </h2>
               <ul className="font-medium text-sm text-primary-black">
@@ -146,7 +146,7 @@ const Footer = async ({ locale }: FooterProps) => {
                           </span>
                           {/* line */}
                           <div
-                            className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-primary-green"
+                            className="w-0 peer-hover:w-full transition-all rounded-full duration-300 h-[1px] bg-link-underlined"
                           />
                         </PrismicNextLink>
                       </li>
@@ -157,7 +157,7 @@ const Footer = async ({ locale }: FooterProps) => {
             </div>
 
             <div className="md:col-span-3">
-              <h2 className="mb-4 text-sm font-bold text-primary-green-dark-dwm uppercase">
+              <h2 className="mb-4 text-sm font-bold text-footer-text uppercase">
                 {t("newsletter")}
               </h2>
               <Paragraph>
@@ -242,7 +242,7 @@ const Footer = async ({ locale }: FooterProps) => {
                 hyperlink: ({ children, node }) => (
                   <PrismicNextLink
                     field={node.data}
-                    className="text-sm text-gray-500 hover:underline cursor-pointer hover:text-primary-green transition-colors duration-300"
+                    className="text-sm text-gray-500 hover:underline cursor-pointer hover:text-link-hover-2 transition-colors duration-300"
                   >
                     {children}
                   </PrismicNextLink>

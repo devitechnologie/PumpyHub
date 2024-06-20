@@ -26,8 +26,8 @@ const inputVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'border border-gray-300 focus:border-primary-green',
-        secondary: 'focus:ring-1 focus:ring-primary-green-dark-dwm',
+        primary: 'border border-gray-300 focus:border-input-focus-primary',
+        secondary: 'focus:ring-1 focus:ring-input-focus-secondary',
       },
       size: {
         sm: 'text-sm',

@@ -56,7 +56,7 @@ const SimpleDropDown = ({ list, placeholder }: SimpleDropDownProps) => {
                     <PrismicNextLink
                       key={i}
                       field={item.field}
-                      className="text-sm uppercase font-semibold text-primary-green-dark-dwm hover:underline cursor-pointer"
+                      className="text-sm uppercase font-semibold text-primary-dark hover:underline cursor-pointer"
                     >
                       {item.label}
                     </PrismicNextLink>

@@ -30,7 +30,7 @@ const ListPagination = ({ totalPages, currentPage }: ListPaginationProps) => {
           <Button
             variant="none"
             onClick={() => onPageChange(currentPage - 1)}
-            className="border hover:border-transparent border-gray-300 text-gray-500 grid place-items-center rounded-md aspect-square w-10 h-10 hover:bg-primary-green hover:text-white transition-all"
+            className="border hover:border-transparent border-gray-300 text-gray-500 grid place-items-center rounded-md aspect-square w-10 h-10 hover:bg-primary hover:text-white transition-all"
           >
             <IoIosArrowBack />
           </Button>
@@ -44,8 +44,8 @@ const ListPagination = ({ totalPages, currentPage }: ListPaginationProps) => {
             variant="none"
             className={
               cn(
-                "border hover:border-transparent border-gray-300 text-gray-500 grid place-items-center rounded-md aspect-square w-10 h-10 hover:bg-primary-green hover:text-white transition-all",
-                currentPage === page && "bg-primary-green text-white border-transparent"
+                "border hover:border-transparent border-gray-300 text-gray-500 grid place-items-center rounded-md aspect-square w-10 h-10 hover:bg-primary hover:text-white transition-all",
+                currentPage === page && "bg-primary text-white border-transparent"
               )
             }
           >
@@ -58,7 +58,7 @@ const ListPagination = ({ totalPages, currentPage }: ListPaginationProps) => {
           <Button
             variant="none"
             onClick={() => onPageChange(currentPage + 1)}
-            className="border hover:border-transparent border-gray-300 text-gray-500 grid place-items-center rounded-md aspect-square w-10 h-10 hover:bg-primary-green hover:text-white transition-all"
+            className="border hover:border-transparent border-gray-300 text-gray-500 grid place-items-center rounded-md aspect-square w-10 h-10 hover:bg-primary hover:text-white transition-all"
           >
             <IoIosArrowForward />
           </Button>

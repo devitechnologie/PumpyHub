@@ -21,10 +21,10 @@ const buttonLinkVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'hover:bg-primary-green text-white ease-in-out bg-primary-green-dark-dwm',
-        secondary: 'bg-white text-primary-black hover:bg-primary-secondary2',
-        ghost: 'bg-transparent text-primary-green hover:bg-primary-green-light-dwm',
-        outlined: 'bg-transparent border-2 border-primary-green text-primary-green hover:bg-primary-green-light-dwm',
+        primary: 'hover:bg-button-primary-hover text-white ease-in-out bg-button-primary',
+        secondary: 'bg-white text-primary-black hover:bg-button-secondary',
+        ghost: 'bg-transparent text-button-ghost-text hover:bg-button-ghost',
+        outlined: 'text-button-outlined-text border border-button-outlined-border hover:bg-button-outlined-hover hover:text-white hover:border-transparent',
         link: 'px-0 py-0 bg-transparent underline',
         none: 'bg-transparent text-black px-0 py-0 font-normal rounded-none',
       },

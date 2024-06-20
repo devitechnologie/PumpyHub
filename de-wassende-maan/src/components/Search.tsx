@@ -31,10 +31,10 @@ const Search = () => {
         name="search"
         id='search'
         placeholder={t('search')}
-        className="w-full pr-9 pl-4 py-3 border border-gray-300 rounded-md outline-none focus:border-primary-green"
+        className="w-full pr-9 pl-4 py-3 border border-gray-300 rounded-md outline-none focus:border-input-focus-primary"
       />
       <Button
-        className="text-2xl bg-primary-green rounded-md p-2 text-white hover:bg-opacity-80 transition-all cursor-pointer absolute top-1/2 right-2 transform -translate-y-1/2"
+        className="text-2xl rounded-md p-2 bg-button-primary-hover text-white hover:bg-opacity-80 transition-all cursor-pointer absolute top-1/2 right-2 transform -translate-y-1/2"
       >
         <div>
           <CiSearch />

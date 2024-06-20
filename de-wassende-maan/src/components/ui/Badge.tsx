@@ -13,14 +13,14 @@ const Badge = ({ children, variant, className }: BadgeProps) => {
         cn(
           "text-sm font-medium py-0.5 px-2 rounded-full",
           {
-            'bg-primary-lime2': variant === 'primary',
-            'bg-primary-secondary': variant === 'secondary',
-            'bg-primary-red text-white': variant === 'danger',
-            'bg-primary-light-orange text-white': variant === 'warning',
-            'bg-primary-blue-sky': variant === 'info',
-            'bg-primary-green-light-dwm': variant === 'success',
-            'bg-primary-surface': variant === 'light',
-            'bg-primary-black': variant === 'dark',
+            'bg-badge-primary': variant === 'primary',
+            'bg-badge-secondary': variant === 'secondary',
+            'bg-badge-danger text-white': variant === 'danger',
+            'bg-badge-warning text-white': variant === 'warning',
+            'bg-badge-info': variant === 'info',
+            'bg-badge-success': variant === 'success',
+            'bg-badge-light': variant === 'light',
+            'bg-badge-dark': variant === 'dark',
           },
           className
         )

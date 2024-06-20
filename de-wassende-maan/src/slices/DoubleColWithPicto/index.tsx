@@ -27,7 +27,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       variant="h2"
-      className="md:mb-4 mb-2 mt-8 text-primary-green-dark-dwm"
+      className="md:mb-4 mb-2 mt-8 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -36,7 +36,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h3"
       variant="h4"
-      className="md:mb-2 mb-2 mt-4 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 mt-4 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -45,7 +45,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h4"
       variant="h5"
-      className="md:mb-2 mb-2 mt-4 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 mt-4 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -54,7 +54,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h5"
       variant="h6"
-      className="md:mb-2 mb-2 mt-4 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 mt-4 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -63,7 +63,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h6"
       variant="h6"
-      className="md:mb-2 mb-2 mt-4 text-primary-green-dark-dwm"
+      className="md:mb-2 mb-2 mt-4 text-heading-secondary"
     >
       {children}
     </Heading>
@@ -79,7 +79,7 @@ const components: JSXMapSerializer = {
     return (
       <PrismicNextLink
         field={node.data}
-        className="text-primary-green hover:underline"
+        className="text-primary hover:underline"
       >
         {children}
       </PrismicNextLink>
@@ -115,7 +115,7 @@ const DoubleColWithPicto = ({ slice }: DoubleColWithPictoProps): JSX.Element => 
                   <Heading
                     as="h2"
                     variant="h1"
-                    className="mb-8 md:mb-12 text-center text-primary-green-dark-dwm capitalize"
+                    className="mb-8 md:mb-12 text-center text-heading-secondary capitalize"
                   >
                     {children}
                   </Heading>

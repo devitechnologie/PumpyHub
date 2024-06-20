@@ -9,7 +9,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       variant="h1"
-      className="mb-4 text-primary-green-dark-dwm text-center"
+      className="mb-4 text-heading-secondary text-center"
     >
       {children}
     </Heading>

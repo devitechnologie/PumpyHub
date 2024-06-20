@@ -55,7 +55,7 @@ const Video = async ({ slice, context }: VideoProps): Promise<JSX.Element> => {
               <Heading
                 as="h2"
                 variant="h2"
-                className="text-primary-green-dark-dwm mb-4"
+                className="text-heading-secondary mb-4"
               >
                 {children}
               </Heading>
@@ -76,7 +76,7 @@ const Video = async ({ slice, context }: VideoProps): Promise<JSX.Element> => {
               return (
                 <Link
                   href={node.data.url || "#"}
-                  className="text-primary-green hover:underline"
+                  className="text-link-hover-2 hover:underline"
                 >
                   {children}
                 </Link>
