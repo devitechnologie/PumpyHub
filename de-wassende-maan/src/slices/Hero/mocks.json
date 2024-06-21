@@ -68,6 +68,21 @@
 				"__TYPE__": "FieldContent",
 				"value": "72",
 				"type": "Number"
+			},
+			"color_background": {
+				"__TYPE__": "FieldContent",
+				"value": "#f6de27",
+				"type": "Color"
+			},
+			"border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "56",
+				"type": "Number"
+			},
+			"background_opacity": {
+				"__TYPE__": "FieldContent",
+				"value": "77",
+				"type": "Number"
 			}
 		},
 		"items": []
@@ -201,6 +216,36 @@
 			"button_border_radius": {
 				"__TYPE__": "FieldContent",
 				"value": "16",
+				"type": "Number"
+			},
+			"first_hero_color_background": {
+				"__TYPE__": "FieldContent",
+				"value": "#36d962",
+				"type": "Color"
+			},
+			"first_hero_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "79",
+				"type": "Number"
+			},
+			"first_hero_background_opacity": {
+				"__TYPE__": "FieldContent",
+				"value": "41",
+				"type": "Number"
+			},
+			"second_hero_color_background": {
+				"__TYPE__": "FieldContent",
+				"value": "#8948a3",
+				"type": "Color"
+			},
+			"second_hero_border_radius": {
+				"__TYPE__": "FieldContent",
+				"value": "5",
+				"type": "Number"
+			},
+			"second_hero_background_opacity": {
+				"__TYPE__": "FieldContent",
+				"value": "4",
 				"type": "Number"
 			}
 		},

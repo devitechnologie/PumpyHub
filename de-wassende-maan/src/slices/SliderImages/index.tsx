@@ -8,6 +8,7 @@ import { Pagination, Autoplay } from 'swiper/modules'
 
 import { cn } from "@/utils/cn"
 import ButtonLink from "@/components/ui/ButtonLink"
+import { hexToRGBA } from "@/utils/helpers"
 
 /**
  * Props for `HomeSlider`.
@@ -57,8 +58,15 @@ const HomeSlider = ({ slice }: HomeSliderProps): JSX.Element => {
                 <div
                   className={cn(
                     "max-w-[650px] text-primary-black",
-                    item.text_color === "light" && "text-white"
+                    item.text_color === "light" && "text-white",
+                    item.color_background && "px-4 py-5"
                   )}
+                  style={{
+                    backgroundColor: item.color_background
+                      ? hexToRGBA(item.color_background, item.background_opacity ? item.background_opacity / 100 : 1)
+                      : "transparent",
+                    borderRadius: item.border_radius || 0
+                  }}
                 >
                   <h1
                     className="text-5xl md:text-[84px] leading-none font-medium capitalize"

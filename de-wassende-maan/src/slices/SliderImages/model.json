@@ -82,6 +82,27 @@
             ],
             "default_value": "left"
           }
+        },
+        "color_background": {
+          "type": "Color",
+          "config": {
+            "label": "color_background",
+            "placeholder": ""
+          }
+        },
+        "border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "border_radius",
+            "placeholder": ""
+          }
+        },
+        "background_opacity": {
+          "type": "Number",
+          "config": {
+            "label": "Background Opacity",
+            "placeholder": "0 - 100 (default is 100)"
+          }
         }
       }
     }

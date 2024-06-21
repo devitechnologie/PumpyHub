@@ -2938,6 +2938,36 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   button_border_radius: prismic.NumberField;
+
+  /**
+   * Color Background field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.color_background
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  color_background: prismic.ColorField;
+
+  /**
+   * border radius field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  border_radius: prismic.NumberField;
+
+  /**
+   * Background Opacity field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: 0 - 100 (default is 100%)
+   * - **API ID Path**: hero.primary.background_opacity
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  background_opacity: prismic.NumberField;
 }
 
 /**
@@ -3030,6 +3060,36 @@ export interface HeroSliceHeroDoublePrimary {
   text_alignment: prismic.SelectField<"center" | "left" | "right", "filled">;
 
   /**
+   * first hero color background field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.first_hero_color_background
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  first_hero_color_background: prismic.ColorField;
+
+  /**
+   * first hero border radius field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.first_hero_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  first_hero_border_radius: prismic.NumberField;
+
+  /**
+   * first hero Background Opacity field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.first_hero_background_opacity
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  first_hero_background_opacity: prismic.NumberField;
+
+  /**
    * second hero image field in *Hero → Primary*
    *
    * - **Field Type**: Image
@@ -3113,6 +3173,36 @@ export interface HeroSliceHeroDoublePrimary {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   button_border_radius: prismic.NumberField;
+
+  /**
+   * second hero color background field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.second_hero_color_background
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  second_hero_color_background: prismic.ColorField;
+
+  /**
+   * second hero border radius field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.second_hero_border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  second_hero_border_radius: prismic.NumberField;
+
+  /**
+   * second hero Background Opacity field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.second_hero_background_opacity
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  second_hero_background_opacity: prismic.NumberField;
 }
 
 /**
@@ -3526,6 +3616,36 @@ export interface HomeSliderSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   text_alignment: prismic.SelectField<"left" | "center" | "right", "filled">;
+
+  /**
+   * color_background field in *SliderImages → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_slider.items[].color_background
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  color_background: prismic.ColorField;
+
+  /**
+   * border_radius field in *SliderImages → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_slider.items[].border_radius
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  border_radius: prismic.NumberField;
+
+  /**
+   * Background Opacity field in *SliderImages → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: 0 - 100 (default is 100)
+   * - **API ID Path**: home_slider.items[].background_opacity
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  background_opacity: prismic.NumberField;
 }
 
 /**

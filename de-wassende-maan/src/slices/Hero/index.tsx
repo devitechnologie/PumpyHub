@@ -2,7 +2,8 @@ import ButtonLink from "@/components/ui/ButtonLink";
 import Heading from "@/components/ui/Heading";
 import Bounded from "@/components/wrappers/Bounded";
 import { cn } from "@/utils/cn";
-import { LinkField, RichTextField } from "@prismicio/client";
+import { hexToRGBA } from "@/utils/helpers";
+import { ColorField, LinkField, NumberField, RichTextField } from "@prismicio/client";
 import { Content, KeyTextField } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
@@ -33,6 +34,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           buttonLink={slice.primary.button_link}
           buttonText={slice.primary.button_text}
           btnRadius={slice.primary.button_border_radius || undefined}
+          backgroundColor={slice.primary.first_hero_color_background}
+          bgOpacity={slice.primary.first_hero_background_opacity}
+          borderRadius={slice.primary.first_hero_border_radius}
         />
         <HeroContent
           imageUrl={slice.primary.second_hero_image.url}
@@ -43,6 +47,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           buttonLink={slice.primary.second_hero_button_link}
           buttonText={slice.primary.second_hero_button_text}
           btnRadius={slice.primary.button_border_radius || undefined}
+          backgroundColor={slice.primary.second_hero_color_background}
+          bgOpacity={slice.primary.second_hero_background_opacity}
+          borderRadius={slice.primary.second_hero_border_radius}
         />
       </section>
     )
@@ -64,6 +71,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         className="aspect-[16/5]"
         contentClassName="container mx-auto max-w-[1300px] p-8 md:p-4"
         btnRadius={slice.primary.button_border_radius || undefined}
+        backgroundColor={slice.primary.color_background}
+        bgOpacity={slice.primary.background_opacity}
+        borderRadius={slice.primary.border_radius}
       />
     </section>
   );
@@ -80,9 +90,26 @@ type HeroContentProps = {
   className?: string;
   contentClassName?: string;
   btnRadius?: number;
+  backgroundColor?: ColorField;
+  bgOpacity?: NumberField | undefined;
+  borderRadius?: NumberField | undefined;
 }
 
-const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink, buttonText, className, contentClassName, btnRadius = 16 }: HeroContentProps): JSX.Element => {
+const HeroContent = ({
+  imageUrl,
+  textAlign,
+  textColor,
+  heading,
+  text,
+  buttonLink,
+  buttonText,
+  className,
+  contentClassName,
+  btnRadius = 16,
+  backgroundColor,
+  bgOpacity,
+  borderRadius,
+}: HeroContentProps): JSX.Element => {
   return (
     <div
       style={{ backgroundImage: `url(${imageUrl})` }}
@@ -98,61 +125,77 @@ const HeroContent = ({ imageUrl, textAlign, textColor, heading, text, buttonLink
     >
       <div
         className={cn(
-          "z-10 max-w-[500px] text-white p-8 md:p-16 flex flex-col",
+          "z-10 max-w-[500px] text-white p-8 md:p-16 flex flex-col ",
           textAlign === "center" && "items-center text-center",
           textAlign === "left" && "items-start text-left",
           textAlign === "right" && "items-end text-right",
           contentClassName,
         )}
+
       >
-        <Heading
-          as="h1"
-          variant="h1"
+        <div
           className={
             cn(
-              textColor === "dark" && "text-heading-secondary",
-              textColor === "light" && "text-white",
-              textAlign === "center" && "text-center",
-              textAlign === "left" && "text-left",
-              textAlign === "right" && "text-right",
+              "w-fit",
+              backgroundColor && "px-4 py-5",
             )
           }
-        >
-          {heading}
-        </Heading>
-        <PrismicRichText
-          field={text}
-          components={{
-            paragraph: ({ children }) => (
-              <p
-                className={
-                  cn(
-                    "text-lg mt-4 max-w-[600px]",
-                    textColor === "dark" && "text-heading-secondary",
-                    textColor === "light" && "text-white",
-                  )
-                }
-              >
-                {children}
-              </p>
-            )
+          style={{
+            backgroundColor: backgroundColor
+              ? hexToRGBA(backgroundColor, bgOpacity ? bgOpacity / 100 : 1)
+              : "transparent",
+            borderRadius: borderRadius || 0
           }}
-        />
-        {
-          buttonLink.link_type !== "Any"
-          && (
-            <ButtonLink
-              field={buttonLink}
-              variant={textColor === "dark" ? "primary" : "secondary"}
-              style={{
-                borderRadius: btnRadius
-              }}
-              className="mt-8 capitalize px-8 py-3"
-            >
-              {buttonText}
-            </ButtonLink>
-          )
-        }
+        >
+          <Heading
+            as="h1"
+            variant="h1"
+            className={
+              cn(
+                textColor === "dark" && "text-heading-secondary",
+                textColor === "light" && "text-white",
+                textAlign === "center" && "text-center",
+                textAlign === "left" && "text-left",
+                textAlign === "right" && "text-right",
+              )
+            }
+          >
+            {heading}
+          </Heading>
+          <PrismicRichText
+            field={text}
+            components={{
+              paragraph: ({ children }) => (
+                <p
+                  className={
+                    cn(
+                      "text-lg mt-4 max-w-[600px]",
+                      textColor === "dark" && "text-heading-secondary",
+                      textColor === "light" && "text-white",
+                    )
+                  }
+                >
+                  {children}
+                </p>
+              )
+            }}
+          />
+          {
+            buttonLink.link_type !== "Any"
+            && (
+              <ButtonLink
+                field={buttonLink}
+                variant={textColor === "dark" ? "primary" : "secondary"}
+                style={{
+                  borderRadius: btnRadius
+                }}
+                className="mt-8 capitalize px-8 py-3"
+              >
+                {buttonText}
+              </ButtonLink>
+            )
+          }
+        </div>
       </div>
 
       {/* overlay */}

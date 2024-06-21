@@ -82,6 +82,27 @@
             "label": "button border radius (Optionnel)",
             "placeholder": "default is 16px"
           }
+        },
+        "color_background": {
+          "type": "Color",
+          "config": {
+            "label": "Color Background",
+            "placeholder": ""
+          }
+        },
+        "border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "border radius",
+            "placeholder": ""
+          }
+        },
+        "background_opacity": {
+          "type": "Number",
+          "config": {
+            "label": "Background Opacity",
+            "placeholder": "0 - 100 (default is 100%)"
+          }
         }
       },
       "items": {}
@@ -159,6 +180,27 @@
             "default_value": "center"
           }
         },
+        "first_hero_color_background": {
+          "type": "Color",
+          "config": {
+            "label": "first hero color background",
+            "placeholder": ""
+          }
+        },
+        "first_hero_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "first hero border radius",
+            "placeholder": ""
+          }
+        },
+        "first_hero_background_opacity": {
+          "type": "Number",
+          "config": {
+            "label": "first hero Background Opacity",
+            "placeholder": ""
+          }
+        },
         "second_hero_image": {
           "type": "Image",
           "config": {
@@ -228,6 +270,27 @@
           "config": {
             "label": "button border radius",
             "placeholder": "default is 16px"
+          }
+        },
+        "second_hero_color_background": {
+          "type": "Color",
+          "config": {
+            "label": "second hero color background",
+            "placeholder": ""
+          }
+        },
+        "second_hero_border_radius": {
+          "type": "Number",
+          "config": {
+            "label": "second hero border radius",
+            "placeholder": ""
+          }
+        },
+        "second_hero_background_opacity": {
+          "type": "Number",
+          "config": {
+            "label": "second hero Background Opacity",
+            "placeholder": ""
           }
         }
       },

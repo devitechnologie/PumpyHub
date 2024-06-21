@@ -88,6 +88,30 @@
 							"value": "right",
 							"type": "Select"
 						}
+					],
+					[
+						"color_background",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#fbad84",
+							"type": "Color"
+						}
+					],
+					[
+						"background_opacity",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "95",
+							"type": "Number"
+						}
+					],
+					[
+						"border_radius",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "22",
+							"type": "Number"
+						}
 					]
 				]
 			}
