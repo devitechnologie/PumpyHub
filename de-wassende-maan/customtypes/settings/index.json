@@ -99,33 +99,6 @@
           "label": "Images Radius",
           "placeholder": "default is 20px"
         }
-      },
-      "paragraphs_font_family": {
-        "type": "Select",
-        "config": {
-          "label": "Paragraphs Font Family",
-          "placeholder": "",
-          "options": [
-            "instrumentSans",
-            "openSans",
-            "poppins",
-            "dmSans",
-            "roboto",
-            "rubik",
-            "montserrat",
-            "lora",
-            "ptSerif",
-            "dmSerifText",
-            "bitter",
-            "bodoniModa",
-            "josefinSlab",
-            "bioRhyme",
-            "playwriteNGModern",
-            "playwriteAustraliaVictoria",
-            "playwriteItaliaModerna"
-          ],
-          "default_value": "instrumentSans"
-        }
       }
     }
   }

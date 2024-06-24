@@ -2,8 +2,6 @@ import Divider from "@/components/ui/Divider";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import Bounded from "@/components/wrappers/Bounded";
-import { createClient } from "@/prismicio";
-import { getFont } from "@/utils/fonts";
 
 import { Content } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
@@ -99,9 +97,6 @@ export type DoubleColWithPictoProps =
  * Component for "DoubleColWithPicto" Slices.
  */
 const DoubleColWithPicto = async ({ slice }: DoubleColWithPictoProps): Promise<JSX.Element> => {
-  const client = createClient()
-  const settings = await client.getSingle("settings")
-  const font = getFont(settings.data.paragraphs_font_family)
 
   return (
     <Bounded
@@ -149,7 +144,7 @@ const DoubleColWithPicto = async ({ slice }: DoubleColWithPictoProps): Promise<J
             />
           </div>
           <div
-            className={`prose ${font.className}`}
+            className={`prose`}
           >
             <PrismicRichText
               field={slice.primary.body_1}
@@ -176,7 +171,7 @@ const DoubleColWithPicto = async ({ slice }: DoubleColWithPictoProps): Promise<J
               components={components}
             />
           </div>
-          <div className={`prose ${font.className}`}>
+          <div className={`prose`}>
             <PrismicRichText
               field={slice.primary.body_2}
               components={components}
