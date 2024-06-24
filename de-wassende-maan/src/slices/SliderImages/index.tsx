@@ -9,6 +9,7 @@ import { Pagination, Autoplay } from 'swiper/modules'
 import { cn } from "@/utils/cn"
 import ButtonLink from "@/components/ui/ButtonLink"
 import { hexToRGBA } from "@/utils/helpers"
+import Paragraph from "@/components/ui/Paragraph"
 
 /**
  * Props for `HomeSlider`.
@@ -73,11 +74,11 @@ const HomeSlider = ({ slice }: HomeSliderProps): JSX.Element => {
                   >
                     {item.title}
                   </h1>
-                  <p
+                  <Paragraph
                     className="mt-4 text-xl md:text-2xl font-medium"
                   >
                     {item.subtitle}
-                  </p>
+                  </Paragraph>
                   <ButtonLink
                     style={{
                       borderRadius: slice.primary.border_radius || 12

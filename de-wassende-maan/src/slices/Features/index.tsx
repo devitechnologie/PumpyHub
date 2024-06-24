@@ -1,4 +1,5 @@
 import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import Bounded from "@/components/wrappers/Bounded";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
@@ -59,11 +60,11 @@ const CardInfo = ({ item }: { item: Content.FeaturesSliceDefaultItem }) => {
         className="text-xl font-semibold text-center text-primary-black">
         {item.title}
       </Heading>
-      <p
+      <Paragraph
         className="text-base md:text-sm text-center text-gray-600"
       >
         {item.text}
-      </p>
+      </Paragraph>
     </div>
   );
 }

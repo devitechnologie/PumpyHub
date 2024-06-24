@@ -1,5 +1,6 @@
 import NewsletterForm from "@/components/forms/NewsletterForm";
 import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import Bounded from "@/components/wrappers/Bounded";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
@@ -34,11 +35,11 @@ const Newsletter = ({ slice }: NewsletterProps): JSX.Element => {
           field={slice.primary.description}
           components={{
             paragraph: ({ children }) => (
-              <p
+              <Paragraph
                 className="text-lg leading-relaxed mb-4 max-w-[500px] mx-auto text-heading-secondary"
               >
                 {children}
-              </p>
+              </Paragraph>
             ),
           }}
         />

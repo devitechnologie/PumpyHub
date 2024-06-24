@@ -1,4 +1,5 @@
 import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import Bounded from "@/components/wrappers/Bounded";
 import { createClient } from "@/prismicio";
 import { cn } from "@/utils/cn";
@@ -62,11 +63,11 @@ const TextWithImage = async ({ slice, context }: TextWithImageProps): Promise<JS
           field={slice.primary.body}
           components={{
             paragraph: ({ children }) => (
-              <p
+              <Paragraph
                 className="text-lg text-gray-600 leading-relaxed mb-4"
               >
                 {children}
-              </p>
+              </Paragraph>
             ),
             hyperlink: ({ children, node }) => {
               return (

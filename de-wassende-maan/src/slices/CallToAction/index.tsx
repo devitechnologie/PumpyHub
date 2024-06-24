@@ -1,5 +1,6 @@
 import ButtonLink from "@/components/ui/ButtonLink";
 import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import Bounded from "@/components/wrappers/Bounded";
 import { cn } from "@/utils/cn";
 import { Content } from "@prismicio/client";
@@ -51,7 +52,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
           field={slice.primary.text}
           components={{
             paragraph: ({ children }) => (
-              <p
+              <Paragraph
                 className={
                   cn(
                     "text-lg leading-relaxed mb-4 max-w-[500px] mx-auto",
@@ -60,7 +61,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
                 }
               >
                 {children}
-              </p>
+              </Paragraph>
             ),
             hyperlink: ({ children, node }) => {
               return (

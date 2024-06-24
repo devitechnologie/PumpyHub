@@ -10,6 +10,7 @@ import "@/styles/globals.css"
 import { createClient } from "@/prismicio"
 import RootPageWrapper from "@/components/wrappers/RootPageWrapper"
 import {getFont} from "@/utils/fonts"
+import { getLongLocale } from "@/utils/helpers"
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
@@ -32,7 +33,7 @@ export default async function RootLayout(
     : Readonly<{ children: React.ReactNode, params: { locale: string } }>
 ) {
   const client = createClient()
-  const settings = await client.getSingle("settings")
+  const settings = await client.getSingle("settings", { lang: getLongLocale(locale) })
   const font = getFont(settings.data.fontfamily)
 
   return (

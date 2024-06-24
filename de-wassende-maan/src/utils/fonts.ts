@@ -1,4 +1,32 @@
-import { Instrument_Sans, Poppins, DM_Sans, Roboto, Rubik, Open_Sans, Montserrat} from "next/font/google"
+import {
+  Instrument_Sans,
+  Poppins,
+  DM_Sans,
+  Roboto,
+  Rubik,
+  Open_Sans,
+  Montserrat,
+  Lora,
+  PT_Serif,
+  DM_Serif_Text,
+  Bitter,
+  Bodoni_Moda,
+  Josefin_Slab,
+  BioRhyme,
+} from "next/font/google"
+import LocalFont from 'next/font/local'
+
+const playwriteNGModern = LocalFont({
+  src: '../fonts/PlaywriteNGModern-VariableFont_wght.ttf',
+})
+
+const playwriteAustraliaVictoria = LocalFont({
+  src: '../fonts/PlaywriteAUVIC-VariableFont_wght.ttf',
+})
+
+const playwriteItaliaModerna = LocalFont({
+  src: '../fonts/PlaywriteITModerna-VariableFont_wght.ttf',
+})
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -37,6 +65,43 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
+const lora = Lora({
+  subsets: ["latin"],
+  variable: '--font-lora',
+})
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  variable: '--font-pt-serif',
+  weight: ['400', '700'],
+})
+
+const dmSerifText = DM_Serif_Text({
+  subsets: ["latin"],
+  variable: '--font-dm-serif-text',
+  weight: ['400'],
+})
+
+const bitter = Bitter({
+  subsets: ["latin"],
+  variable: '--font-bitter',
+})
+
+const bodoniModa = Bodoni_Moda({
+  subsets: ["latin"],
+  variable: '--font-bodoni-moda',
+})
+
+const josefinSlab = Josefin_Slab({
+  subsets: ["latin"],
+  variable: '--font-josefin-slab',
+})
+
+const bioRhyme = BioRhyme({
+  subsets: ["latin"],
+  variable: '--font-bio-rhyme',
+})
+
 const fonts = {
   instrumentSans,
   openSans,
@@ -45,6 +110,16 @@ const fonts = {
   roboto,
   rubik,
   montserrat,
+  lora,
+  ptSerif,
+  dmSerifText,
+  bitter,
+  bodoniModa,
+  josefinSlab,
+  bioRhyme,
+  playwriteNGModern,
+  playwriteAustraliaVictoria,
+  playwriteItaliaModerna,
 }
 
 type FontName = keyof typeof fonts

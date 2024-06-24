@@ -1,5 +1,6 @@
 import ButtonLink from "@/components/ui/ButtonLink";
 import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import Bounded from "@/components/wrappers/Bounded";
 import { cn } from "@/utils/cn";
 import { hexToRGBA } from "@/utils/helpers";
@@ -166,7 +167,7 @@ const HeroContent = ({
             field={text}
             components={{
               paragraph: ({ children }) => (
-                <p
+                <Paragraph
                   className={
                     cn(
                       "text-lg mt-4 max-w-[600px]",
@@ -176,7 +177,7 @@ const HeroContent = ({
                   }
                 >
                   {children}
-                </p>
+                </Paragraph>
               )
             }}
           />

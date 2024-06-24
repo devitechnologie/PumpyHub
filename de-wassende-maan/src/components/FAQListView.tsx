@@ -20,11 +20,11 @@ const components: JSXMapSerializer = {
     </Heading>
   ),
   paragraph: ({ children }) => (
-    <Paragraph
+    <p
       className="text-gray-500 text-base mt-2"
     >
       {children}
-    </Paragraph>
+    </p>
   ),
   hyperlink: ({ children, node }) => {
     return (

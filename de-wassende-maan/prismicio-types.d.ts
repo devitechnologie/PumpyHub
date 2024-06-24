@@ -1837,7 +1837,17 @@ interface SettingsDocumentData {
     | "dmSans"
     | "roboto"
     | "rubik"
-    | "montserrat",
+    | "montserrat"
+    | "lora"
+    | "ptSerif"
+    | "dmSerifText"
+    | "bitter"
+    | "bodoniModa"
+    | "josefinSlab"
+    | "bioRhyme"
+    | "playwriteNGModern"
+    | "playwriteAustraliaVictoria"
+    | "playwriteItaliaModerna",
     "filled"
   >;
 
@@ -1851,6 +1861,37 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   images_raduis: prismic.NumberField;
+
+  /**
+   * Paragraphs Font Family field in *settings*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: instrumentSans
+   * - **API ID Path**: settings.paragraphs_font_family
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  paragraphs_font_family: prismic.SelectField<
+    | "instrumentSans"
+    | "openSans"
+    | "poppins"
+    | "dmSans"
+    | "roboto"
+    | "rubik"
+    | "montserrat"
+    | "lora"
+    | "ptSerif"
+    | "dmSerifText"
+    | "bitter"
+    | "bodoniModa"
+    | "josefinSlab"
+    | "bioRhyme"
+    | "playwriteNGModern"
+    | "playwriteAustraliaVictoria"
+    | "playwriteItaliaModerna",
+    "filled"
+  >;
 }
 
 /**
