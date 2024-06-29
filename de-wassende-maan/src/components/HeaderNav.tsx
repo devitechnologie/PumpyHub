@@ -10,15 +10,16 @@ import { useEffect, useState } from "react"
 import { cn } from "@/utils/cn"
 import Button from "./ui/Button"
 import { IoCloseOutline } from "react-icons/io5"
-import { NavigationDocument } from "../../prismicio-types"
+import { NavigationDocument, SettingsDocument } from "../../prismicio-types"
 import { useWindowScroll } from "@uidotdev/usehooks"
 import { PrismicImage } from "@prismicio/react"
 
 type HeaderNavProps = {
   data: NavigationDocument<string>
+  settings: SettingsDocument
 }
 
-const HeaderNav = ({ data }: HeaderNavProps) => {
+const HeaderNav = ({ data, settings }: HeaderNavProps) => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [collapsed, setCollapsed] = useState(false)
   const { y } = useWindowScroll()[0]
@@ -126,7 +127,9 @@ const HeaderNav = ({ data }: HeaderNavProps) => {
             <p
               className="text-2xl text-slate-950 font-semibold p-4 text-center"
             >
-              De Wassende Maan
+              {
+                settings.data.site_title
+              }
             </p>
           </div>
           {/* search */}

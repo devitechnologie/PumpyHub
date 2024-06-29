@@ -99,6 +99,7 @@ const config: Config = {
       },
       fontFamily: {
         "instrument-sans": ['var(--font-instrument-sans)'],
+        "paragraph": ['var(--font-paragraph)'],
       },
       backgroundImage: {
         'newsletter': 'url("/images/bg-newsletter-lime.png")',

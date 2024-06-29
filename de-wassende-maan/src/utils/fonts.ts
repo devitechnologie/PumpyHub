@@ -1,3 +1,4 @@
+import { NextFontWithVariable } from "next/dist/compiled/@next/font"
 import {
   Instrument_Sans,
   Poppins,
@@ -18,88 +19,91 @@ import LocalFont from 'next/font/local'
 
 const playwriteNGModern = LocalFont({
   src: '../fonts/PlaywriteNGModern-VariableFont_wght.ttf',
+  variable: '--font-paragraph',
 })
 
 const playwriteAustraliaVictoria = LocalFont({
   src: '../fonts/PlaywriteAUVIC-VariableFont_wght.ttf',
+  variable: '--font-paragraph',
 })
 
 const playwriteItaliaModerna = LocalFont({
   src: '../fonts/PlaywriteITModerna-VariableFont_wght.ttf',
+  variable: '--font-paragraph',
 })
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  variable: '--font-instrument-sans',
+  variable: '--font-paragraph',
 })
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: '--font-open-sans',
+  variable: '--font-paragraph',
 })
 
 const poppins = Poppins({
   subsets: ["latin"],
-  variable: '--font-poppins',
+  variable: '--font-paragraph',
   weight: ['100', '200', '300', '400', '500', '700', '800', '900'],
 })
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: '--font-dm-sans',
+  variable: '--font-paragraph',
 })
 
 const roboto = Roboto({
   subsets: ["latin"],
-  variable: '--font-roboto',
+  variable: '--font-paragraph',
   weight: ['100', '300', '400', '500', '700', '900'],
 })
 
 const rubik = Rubik({
   subsets: ["latin"],
-  variable: '--font-rubik',
+  variable: '--font-paragraph',
 })
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: '--font-montserrat',
+  variable: '--font-paragraph',
 })
 
 const lora = Lora({
   subsets: ["latin"],
-  variable: '--font-lora',
+  variable: '--font-paragraph',
 })
 
 const ptSerif = PT_Serif({
   subsets: ["latin"],
-  variable: '--font-pt-serif',
+  variable: '--font-paragraph',
   weight: ['400', '700'],
 })
 
 const dmSerifText = DM_Serif_Text({
   subsets: ["latin"],
-  variable: '--font-dm-serif-text',
+  variable: '--font-paragraph',
   weight: ['400'],
 })
 
 const bitter = Bitter({
   subsets: ["latin"],
-  variable: '--font-bitter',
+  variable: '--font-paragraph',
 })
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
-  variable: '--font-bodoni-moda',
+  variable: '--font-paragraph',
 })
 
 const josefinSlab = Josefin_Slab({
   subsets: ["latin"],
-  variable: '--font-josefin-slab',
+  variable: '--font-paragraph',
 })
 
 const bioRhyme = BioRhyme({
   subsets: ["latin"],
-  variable: '--font-bio-rhyme',
+  variable: '--font-paragraph',
 })
 
 const fonts = {
@@ -122,8 +126,8 @@ const fonts = {
   playwriteItaliaModerna,
 }
 
-type FontName = keyof typeof fonts
+export type FontName = keyof typeof fonts
 
-export const getFont = (fontName: FontName | undefined | null) => {
+export const getFont = (fontName: FontName | undefined | null): NextFontWithVariable => {
   return fonts[fontName || "instrumentSans"]
 }

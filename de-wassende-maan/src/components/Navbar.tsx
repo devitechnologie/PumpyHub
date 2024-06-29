@@ -15,6 +15,9 @@ const Navbar = async ({ locale }: { locale: string }) => {
   const navigation = await client.getSingle("navigation", {
     lang: getLongLocale(locale)
   })
+  const settings = await client.getSingle("settings", {
+    lang: getLongLocale(locale)
+  })
 
   return (
     <header
@@ -27,6 +30,7 @@ const Navbar = async ({ locale }: { locale: string }) => {
       {/* header Navbar */}
       <HeaderNav
         data={navigation}
+        settings={settings}
       />
     </header>
   )

@@ -6,6 +6,10 @@
   --nav-height: 166px;
 }
 
+p, a, span, label, button, input, select, textarea, li, td, th, ul, ol {
+  font-family: var(--font-paragraph);
+}
+
 .app-container {
   @apply container mx-auto px-4 max-w-[1300px];
 }

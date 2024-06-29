@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import "@/styles/globals.css"
 import { createClient } from "@/prismicio"
 import RootPageWrapper from "@/components/wrappers/RootPageWrapper"
-import {getFont} from "@/utils/fonts"
+import { getFont } from "@/utils/fonts"
 import { getLongLocale } from "@/utils/helpers"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -34,12 +34,13 @@ export default async function RootLayout(
 ) {
   const client = createClient()
   const settings = await client.getSingle("settings", { lang: getLongLocale(locale) })
-  const font = getFont(settings.data.fontfamily)
+  const fontHeadings = getFont(settings.data.fontfamily)
+  const fontParagraphs = getFont(settings.data.paragraphs_font_family)
 
   return (
     <html lang={locale}>
       <body
-        className={font.className}
+        className={`${fontParagraphs.variable} ${fontHeadings.className}`}
       >
         <RootPageWrapper
           locale={locale}
