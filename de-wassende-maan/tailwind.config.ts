@@ -32,7 +32,7 @@ const config: Config = {
         'button-ghost': '#fff300',
         'button-ghost-text': '#8c7000',
 
-        'button-outlined-border': '#f87d1e',
+        'button-outlined-border': '#ff8200',
         'button-outlined-hover': '#027365',
         'button-outlined-text': '#0e4039',
 
@@ -59,7 +59,7 @@ const config: Config = {
         'link-text': '#000000',
 
         /// paragraph colors
-        'paragraph-primary': '#363636',
+        'paragraph-primary': '#d00000',
         'paragraph-secondary': '#696C70',
         'paragraph-tertiary': '#0e4039',
 
