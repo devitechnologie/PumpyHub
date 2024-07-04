@@ -12,32 +12,32 @@ const config: Config = {
     extend: {
       colors: {
         /// default dark color "most used in text"
-        'primary-black': '#1F1F1F',
-        'primary': '#48b170',
-        'primary-dark': '#0e4039',
+        'primary-black': '#000000',
+        'primary': '#444444',
+        'primary-dark': '#340e40',
 
         /// input colors
-        'input-focus-primary': '#48b170',
-        'input-focus-secondary': '#0e4039',
+        'input-focus-primary': '#02bdff',
+        'input-focus-secondary': '#004a86',
 
         /// button colors
-        'button-primary-hover': '#48b170',
-        'button-primary': '#0e4039',
+        'button-primary-hover': '#ff5b00',
+        'button-primary': '#ff8200',
 
         
-        'button-secondary': '#A0A0A0',
+        'button-secondary': '#ff8200',
         
-        'button-trinary': '#d0df90',
+        'button-trinary': '#ff8200',
 
-        'button-ghost': '#48b170',
-        'button-ghost-text': '#48b170',
+        'button-ghost': '#fff300',
+        'button-ghost-text': '#8c7000',
 
-        'button-outlined-border': '#0e4039',
-        'button-outlined-hover': '#48b170',
+        'button-outlined-border': '#f87d1e',
+        'button-outlined-hover': '#027365',
         'button-outlined-text': '#0e4039',
 
         /// badge colors for news & events & recipes & jobs... most used in cards
-        'badge-primary':'#D2EF9A',
+        'badge-primary':'#ff8200',
         'badge-secondary':'#696C70',
         'badge-danger':'#DB4444',
         'badge-warning':'#fa8f2e',
@@ -47,25 +47,25 @@ const config: Config = {
         'badge-dark':'#1F1F1F',
 
         /// footer colors
-        'footer-bg': '#F7F7F7',
-        'footer-text': '#0e4039',
-        'footer-link-up': '#0e4039',
-        'footer-link-down': '#48b170',
+        'footer-bg': '#f1f1f1',
+        'footer-text': '#000000',
+        'footer-link-up': '#ff8200',
+        'footer-link-down': '#ff7700',
 
         /// link colors
-        'link-underlined': '#48b170',
-        'link-hover-2': '#48b170',
-        'link-hover': '#1F1F1F',
-        'link-text': '#1F1F1F',
+        'link-underlined': '#ff8200',
+        'link-hover-2': '#ff3c00',
+        'link-hover': '#ff3c00',
+        'link-text': '#000000',
 
         /// paragraph colors
-        'paragraph-primary': '#1F1F1F',
+        'paragraph-primary': '#363636',
         'paragraph-secondary': '#696C70',
         'paragraph-tertiary': '#0e4039',
 
         /// heading text colors
         'heading-primary': '#1F1F1F',
-        'heading-secondary': '#0e4039',
+        'heading-secondary': '#000000',
 
         /// call to action card
         'call-to-action-dark': '#0e4039',
