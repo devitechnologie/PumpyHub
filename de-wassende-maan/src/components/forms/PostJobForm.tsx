@@ -4,6 +4,7 @@ import { FileUploader } from "react-drag-drop-files"
 import { RiUpload2Line } from "react-icons/ri"
 import { useForm, Controller } from "react-hook-form"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
+import { useTranslation } from "react-i18next"
 
 import Button from "../ui/Button"
 import Input from "../ui/Input"
@@ -28,6 +29,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
     getValues
   } = useForm<TJobPost & { acceptTerms: boolean }>()
   const { mutateAsync: submitForm, isLoading } = useJobs()
+  const { t } = useTranslation()
 
   const onSubmit = async (data: TJobPost) => {
     data.jobUID = jobUID
@@ -44,11 +46,11 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
 
     submitForm(formData, {
       onSuccess: () => {
-        alertToast('success', 'Message sent successfully')
+        alertToast('success', t('contact_form.success_message'))
         reset()
       },
       onError: (error) => {
-        alertToast('error', 'An error occurred. Please try again later')
+        alertToast('error',  t('error_message'))
         console.log(error)
       }
     })
@@ -68,11 +70,11 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
           {/* nom */}
           <Input
             type="text"
-            placeholder="Nom*"
+            placeholder={t('forms.first_name')}
             className="py-3 w-full"
             {...register('firstName', {
-              required: 'This field is required',
-              minLength: { value: 2, message: 'This field must be at least 2 characters long' }
+              required: t('errors.required'),
+              minLength: { value: 2, message: t('errors.min_length', { min: 2 }) }
             })}
             validation={errors.firstName ? true : false}
           />
@@ -89,11 +91,11 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
           {/* prenom */}
           <Input
             type="text"
-            placeholder="Prenom*"
+            placeholder={t('forms.last_name')}
             className="py-3 w-full"
             {...register('lastName', {
-              required: 'This field is required',
-              minLength: { value: 2, message: 'This field must be at least 2 characters long' }
+              required: t('errors.required'),
+              minLength: { value: 2, message: t('errors.min_length', { min: 2 }) }
             })}
             validation={errors.lastName ? true : false}
           />
@@ -110,13 +112,13 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
           {/* email */}
           <Input
             type="email"
-            placeholder="Your email*"
+            placeholder={t('forms.email')}
             className="py-3 w-full"
             {...register('email', {
-              required: 'This field is required',
+              required: t('errors.required'),
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                message: 'Invalid email address'
+                message: t('errors.invalid_email')
               }
             })}
             validation={errors.email ? true : false}
@@ -134,13 +136,13 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
           {/* phone */}
           <Input
             type="tel"
-            placeholder="Your phone number*"
+            placeholder={t('forms.phone')}
             className="py-3 w-full"
             {...register('phone', {
-              required: 'This field is required',
+              required: t('errors.required'),
               pattern: {
                 value: /^[0-9]*$/i,
-                message: 'Invalid phone number'
+                message: t('errors.invalid_phone')
               }
             })}
             validation={errors.phone ? true : false}
@@ -157,12 +159,12 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
         <div className="col-span-2">
           {/* message */}
           <textarea
-            placeholder="Your message*"
+            placeholder={t('forms.message')}
             className={`w-full input ${errors.message ? 'error' : ''}`}
             rows={7}
             {...register('message', {
-              required: 'This field is required',
-              minLength: { value: 10, message: 'This field must be at least 10 characters long' }
+              required: t('errors.required'),
+              minLength: { value: 10, message: t('errors.min_length', { min: 10 }) }
             })}
           />
           {/* error message */}
@@ -178,7 +180,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
           <label
             className="block text-sm font-medium text-primary-dark mb-2"
           >
-            Add your resume* (PDF, DOC, DOCX)
+            {t('add_resume')} (PDF, DOC, DOCX) 
           </label>
           <div className="w-fit">
             <Controller
@@ -207,7 +209,8 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
                         className="text-base"
                       />
                       <span>
-                        Upload File
+                        {/* Upload File */}
+                        {t('upload_file')}
                       </span>
                     </Button>
                     {
@@ -217,7 +220,8 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
                         </span>
                       ) : (
                         <span>
-                          Or drop file
+                          {/* Or drop file */}
+                          {t('drop_file')}
                         </span>
                       )
                     }
@@ -287,7 +291,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
               htmlFor="terms"
               className="text-sm select-none"
             >
-              On submitting this form, you agree to the information provided being used in accordance with our privacy policy.
+              {t('contact_form.accept_terms')}
             </label>
           </div>
           {/* error message */}
@@ -308,7 +312,7 @@ const PostJobForm = ({ jobUID, reply_to, cc }: PostJobFormProps) => {
         isLoading={isLoading}
       >
         <span>
-          Submit Application
+          {t('submit_application')}
         </span>
         {isLoading && <AiOutlineLoading3Quarters className="animate-spin" />}
       </Button>

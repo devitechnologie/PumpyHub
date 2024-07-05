@@ -3,6 +3,7 @@
 import { useForm, Controller } from 'react-hook-form'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { useTranslation } from 'react-i18next'
 
 import Button from '../ui/Button'
 import Input from '../ui/Input'
@@ -29,16 +30,17 @@ const NewsletterForm = ({ placeholderText, buttonText, footerVariant }: Newslett
     control
   } = useForm<TFormValues>()
   const { mutateAsync: subscribeToNewsletter, isLoading } = useNewsLetter()
+  const { t } = useTranslation()
 
   const onSubmit = async (data: TFormValues) => {
     subscribeToNewsletter(
       { email: data.email, name: data.email },
       {
         onSuccess: () => {
-          alertToast('success', 'Subscribed to newsletter successfully')
+          alertToast('success', t('newsletter_form.success_message'))
         },
         onError: (error) => {
-          alertToast('warning', 'Email already subscribed')
+          alertToast('warning', t('newsletter_form.already_subscribed'))
           console.log(error)
         }
       })
@@ -54,10 +56,10 @@ const NewsletterForm = ({ placeholderText, buttonText, footerVariant }: Newslett
             control={control}
             defaultValue=""
             rules={{
-              required: 'Email is required',
+              required: t('errors.email'),
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,10}$/i,
-                message: 'Invalid email address'
+                message: t('errors.invalid_email')
               }
             }}
             render={({ field }) => (
@@ -95,10 +97,10 @@ const NewsletterForm = ({ placeholderText, buttonText, footerVariant }: Newslett
           control={control}
           defaultValue=""
           rules={{
-            required: 'Email is required',
+            required: t('errors.email'),
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,10}$/i,
-              message: 'Invalid email address'
+              message: t('errors.invalid_email')
             }
           }}
           render={({ field }) => (

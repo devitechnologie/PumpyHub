@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { useTranslation } from 'react-i18next'
 
 import Button from "../ui/Button"
 import Heading from "../ui/Heading"
@@ -24,17 +25,18 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
     register
   } = useForm<TContactUs & { acceptTerms: boolean }>()
   const { mutateAsync: submitForm, isLoading } = useContact()
+  const { t } = useTranslation()
 
   const onSubmit = async (data: TContactUs) => {
     if (reply_to) data.reply_to = reply_to
     if (cc) data.cc = cc
     submitForm(data, {
       onSuccess: () => {
-        alertToast('success', 'Message sent successfully')
+        alertToast('success', t('contact_form.success_message'))
         reset()
       },
       onError: (error) => {
-        alertToast('error', 'An error occurred. Please try again later')
+        alertToast('error', t('error_message'))
         console.log(error)
       }
     })
@@ -50,12 +52,12 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
           variant="h1"
           className="mb-4 text-heading-secondary"
         >
-          Send us a message
+          {t('contact_form.title')}
         </Heading>
         <Paragraph
           className="mb-6"
         >
-          Fill out the form below and well get back to you as soon as possible.
+          {t('contact_form.description')}
         </Paragraph>
       </div>
       <div
@@ -65,13 +67,13 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
           {/* fullName */}
           <Input
             type="text"
-            placeholder="Your name*"
+            placeholder={t('forms.full_name')}
             className="py-3 w-full"
             {...register('fullName', {
-              required: 'Full name is required',
+              required: t('errors.required'),
               minLength: {
                 value: 3,
-                message: 'Full name should have at least 3 characters'
+                message: t('errors.min_length', { min: 3 })
               }
             })}
             validation={errors.fullName ? true : false}
@@ -89,13 +91,13 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
           {/* email */}
           <Input
             type="email"
-            placeholder="Your email*"
+            placeholder={t('forms.email')}
             className="py-3 w-full"
             {...register('email', {
-              required: 'Email is required',
+              required:  t('errors.required'),
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,10}$/i,
-                message: 'Invalid email address'
+                message: t('errors.invalid_email')
               }
             })}
             validation={errors.email ? true : false}
@@ -113,13 +115,13 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
           {/* phone */}
           <Input
             type="tel"
-            placeholder="Your phone number*"
+            placeholder={t('forms.phone')}
             className="py-3 w-full"
             {...register('phone', {
-              required: 'Phone number is required',
+              required:  t('errors.required'),
               pattern: {
                 value: /^[0-9]*$/i,
-                message: 'Invalid phone number'
+                message: t('errors.invalid_phone')
               }
             })}
             validation={errors.phone ? true : false}
@@ -137,13 +139,13 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
           {/* subject */}
           <Input
             type="text"
-            placeholder="Subject*"
+            placeholder={t('forms.subject')}
             className="py-3 w-full"
             {...register('subject', {
-              required: 'Subject is required',
+              required: t('errors.required'),
               minLength: {
                 value: 3,
-                message: 'Subject should have at least 3 characters'
+                message: t('errors.min_length', { min: 3 })
               }
             })}
             validation={errors.subject ? true : false}
@@ -160,14 +162,14 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
         <div className="col-span-2">
           {/* message */}
           <textarea
-            placeholder="Your message*"
+            placeholder={t('forms.message')}
             className={`"w-full input ${errors.message ? 'error' : ''}`}
             rows={7}
             {...register('message', {
-              required: 'Message is required',
+              required:  t('errors.required'),
               minLength: {
                 value: 10,
-                message: 'Message should have at least 10 characters'
+                message: t('errors.min_length', { min: 10 })
               }
             })}
           />
@@ -189,14 +191,14 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
               type="checkbox"
               id="terms"
               className="rounded-sm w-4 h-4"
-              {...register('acceptTerms', { required: 'This field is required' })}
+              {...register('acceptTerms', { required: t('errors.accept_terms') })}
               validation={errors.acceptTerms ? true : false}
             />
             <label
               htmlFor="terms"
               className="text-sm select-none"
             >
-              On submitting this form, you agree to the information provided being used in accordance with our privacy policy.
+              {t('contact_form.accept_terms')}
             </label>
           </div>
           {/* error message */}
@@ -217,7 +219,7 @@ const ContactForm = ({ reply_to, cc }: TContactForm) => {
         isLoading={isLoading}
       >
         <span>
-          Submit message
+        {t('submit_message')} 
         </span>
         {isLoading && <AiOutlineLoading3Quarters className="animate-spin" />}
       </Button>

@@ -1,3 +1,5 @@
+"use client"
+
 import { Content } from "@prismicio/client"
 import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react"
 

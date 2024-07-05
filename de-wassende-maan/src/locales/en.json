@@ -28,5 +28,41 @@
   "ingredients": "Ingredients",
   "home_page": "Home",
   "payment_methods": "Payment methods",
-  "newsletter_placeholder": "Your email address"
+  "newsletter_placeholder": "Your email address",
+  "error_message": "An error occurred. Please try again later.",
+  "contact_form": {
+    "success_message": "Your message has been sent successfully.",
+    "title": "Send us a message",
+    "description": "Fill out the form below and we'll get back to you as soon as possible.",
+    "accept_terms": "By submitting this form, you agree that the information provided will be used in accordance with our privacy policy."
+  },
+  "forms": {
+    "full_name": "Your full name*",
+    "email": "Your email address*",
+    "phone": "Your phone number",
+    "subject": "Subject*",
+    "message": "Your message*",
+    "first_name": "Your first name*",
+    "last_name": "Your last name*"
+  },
+  "errors": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "phone": "Please enter a valid phone number",
+    "min_length": "This field must contain at least {min} characters",
+    "max_length": "This field must contain a maximum of {max} characters",
+    "accept_terms": "You must accept the terms and conditions",
+    "invalid_email": "Invalid email address",
+    "invalid_phone": "Invalid phone number"
+  },
+  "submit_message": "Send message",
+  "submit_application": "Submit application",
+  "add_resume": "Add your resume",
+  "upload_file": "Upload a file",
+  "drop_file": "Or drop a file here",
+  "newsletter_form": {
+    "success_message": "Your subscription to the newsletter has been successfully registered.",
+    "already_subscribed": "You are already subscribed to our newsletter.",
+    "email_required": "Please enter a valid email address."
+  }
 }

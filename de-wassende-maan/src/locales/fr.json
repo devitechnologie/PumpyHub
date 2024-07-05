@@ -28,5 +28,41 @@
   "ingredients": "Ingrédients",
   "home_page": "Page d'accueil",
   "payment_methods": "Moyens de paiement",
-  "newsletter_placeholder": "Votre adresse e-mail"
+  "newsletter_placeholder": "Votre adresse e-mail",
+  "error_message": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+  "contact_form": {
+    "success_message": "Votre message a bien été envoyé.",
+    "title": "Envoie-nous un message",
+    "description": "Remplissez le formulaire ci-dessous et nous vous recontacterons dès que possible.",
+    "accept_terms": "En soumettant ce formulaire, vous acceptez que les informations fournies soient utilisées conformément à notre politique de confidentialité."
+  },
+  "forms": {
+    "full_name": "Votre nom complet*",
+    "email": "Votre adresse e-mail*",
+    "phone": "Votre numéro de téléphone",
+    "subject": "Sujet*",
+    "message": "Votre message*",
+    "first_name": "Votre prénom*",
+    "last_name": "Votre nom*"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "email": "Veuillez saisir une adresse e-mail valide",
+    "phone": "Veuillez saisir un numéro de téléphone valide",
+    "min_length": "Ce champ doit contenir au moins {{min}} caractères",
+    "max_length": "Ce champ doit contenir au maximum {{max}} caractères",
+    "accept_terms": "Vous devez accepter les termes et conditions",
+    "invalid_email": "Adresse e-mail invalide",
+    "invalid_phone": "Numéro de téléphone invalide"
+  },
+  "submit_message": "Envoyer le message",
+  "submit_application": "Envoyer la candidature",
+  "add_resume": "Ajouter votre CV",
+  "upload_file": "Télécharger un fichier",
+  "drop_file": "Ou déposez un fichier ici",
+  "newsletter_form": {
+    "success_message": "Votre inscription à la newsletter a bien été enregistrée.",
+    "already_subscribed": "Vous êtes déjà inscrit à notre newsletter.",
+    "email_required": "Veuillez saisir une adresse e-mail valide."
+  }
 }

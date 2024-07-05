@@ -28,5 +28,41 @@
   "ingredients": "Ingrediënten",
   "home_page": "Home",
   "payment_methods": "Betaalmethoden",
-  "newsletter_placeholder": "Uw e-mailadres"
+  "newsletter_placeholder": "Uw e-mailadres",
+  "error_message": "Er is een fout opgetreden. Probeer het later opnieuw.",
+  "contact_form": {
+    "success_message": "Je bericht is succesvol verzonden.",
+    "title": "Stuur ons een bericht",
+    "description": "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met je op.",
+    "accept_terms": "Door dit formulier in te dienen, gaat u ermee akkoord dat de verstrekte informatie wordt gebruikt in overeenstemming met ons privacybeleid."
+  },
+  "forms": {
+    "full_name": "Uw volledige naam*",
+    "email": "Uw e-mailadres*",
+    "phone": "Uw telefoonnummer",
+    "subject": "Onderwerp*",
+    "message": "Uw bericht*",
+    "first_name": "Uw voornaam*",
+    "last_name": "Uw achternaam*"
+  },
+  "errors": {
+    "required": "Dit veld is verplicht",
+    "email": "Voer een geldig e-mailadres in",
+    "phone": "Voer een geldig telefoonnummer in",
+    "min_length": "Dit veld moet ten minste {min} tekens bevatten",
+    "max_length": "Dit veld mag maximaal {max} tekens bevatten",
+    "accept_terms": "U moet de voorwaarden accepteren",
+    "invalid_email": "Ongeldig e-mailadres",
+    "invalid_phone": "Ongeldig telefoonnummer"
+  },
+  "submit_message": "Bericht verzenden",
+  "submit_application": "Sollicitatie indienen",
+  "add_resume": "Voeg uw CV toe",
+  "upload_file": "Upload een bestand",
+  "drop_file": "Of sleep hier een bestand",
+  "newsletter_form": {
+    "success_message": "Uw inschrijving op de nieuwsbrief is succesvol geregistreerd.",
+    "already_subscribed": "U bent al ingeschreven voor onze nieuwsbrief.",
+    "email_required": "Voer een geldig e-mailadres in."
+  }
 }
