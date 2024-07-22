@@ -75,7 +75,7 @@ const NewsletterForm = ({ placeholderText, buttonText, footerVariant }: Newslett
             <Button
               variant="secondary"
               isLoading={isLoading}
-              className="px-6 py-2 uppercase text-sm h-full rounded-xl bg-button-trinary hover:bg-button-primary-hover flex items-center gap-2"
+              className="px-6 py-2 uppercase text-sm h-full rounded-xl bg-button-trinary hover:bg-button-trinary-hover flex items-center gap-2"
               disabled={isLoading}
             >
               <FaArrowRightLong />
@@ -116,7 +116,7 @@ const NewsletterForm = ({ placeholderText, buttonText, footerVariant }: Newslett
           <Button
             variant="secondary"
             isLoading={isLoading}
-            className="px-6 py-2 uppercase text-sm h-full rounded-xl bg-button-trinary hover:bg-button-primary-hover flex items-center gap-2"
+            className="px-6 py-2 uppercase text-sm h-full rounded-xl bg-button-trinary hover:bg-button-trinary-hover flex items-center gap-2"
             disabled={isLoading}
           >
             {buttonText}

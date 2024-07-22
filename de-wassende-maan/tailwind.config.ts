@@ -21,13 +21,15 @@ const config: Config = {
         'input-focus-secondary': '#004a86',
 
         /// button colors
-        'button-primary-hover': '#ff5b00',
         'button-primary': '#ff8200',
+        'button-primary-hover': '#ff5b00',
 
         
         'button-secondary': '#ff8200',
+        'button-secondary-hover': '#ff0000',
         
         'button-trinary': '#ff8200',
+        'button-trinary-hover': '#ff0000',
 
         'button-ghost': '#fff300',
         'button-ghost-text': '#8c7000',
