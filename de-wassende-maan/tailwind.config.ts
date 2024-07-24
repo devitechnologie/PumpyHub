@@ -22,14 +22,14 @@ const config: Config = {
 
         /// button colors
         'button-primary': '#ff8200',
-        'button-primary-hover': '#ff5b00',
+        'button-primary-hover': '#fa4100',
 
         
         'button-secondary': '#ff8200',
-        'button-secondary-hover': '#ff0000',
+        'button-secondary-hover': '#fa4100',
         
         'button-trinary': '#ff8200',
-        'button-trinary-hover': '#ff0000',
+        'button-trinary-hover': '#fa4100',
 
         'button-ghost': '#fff300',
         'button-ghost-text': '#8c7000',
@@ -39,12 +39,12 @@ const config: Config = {
         'button-outlined-text': '#0e4039',
 
         /// badge colors for news & events & recipes & jobs... most used in cards
-        'badge-primary':'#ff8200',
+        'badge-primary':'#ff922e',
         'badge-secondary':'#696C70',
-        'badge-danger':'#DB4444',
-        'badge-warning':'#fa8f2e',
+        'badge-danger':'#ff1e1e',
+        'badge-warning':'#ffad00',
         'badge-info':'#a3ccee',
-        'badge-success':'#48b170',
+        'badge-success':'#22ad43',
         'badge-light':'#F7F7F7',
         'badge-dark':'#1F1F1F',
 
@@ -61,9 +61,9 @@ const config: Config = {
         'link-text': '#000000',
 
         /// paragraph colors
-        'paragraph-primary': '#d00000',
-        'paragraph-secondary': '#696C70',
-        'paragraph-tertiary': '#0e4039',
+        'paragraph-primary': '#000000',
+        'paragraph-secondary': '#4a4a4f',
+        'paragraph-tertiary': '#797979',
 
         /// heading text colors
         'heading-primary': '#1F1F1F',
