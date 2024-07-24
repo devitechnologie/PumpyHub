@@ -2066,67 +2066,67 @@ export type AllDocumentTypes =
   | TopBarDocument;
 
 /**
- * Primary content in *CallToAction → Primary*
+ * Primary content in *CallToAction → Default → Primary*
  */
 export interface CallToActionSliceDefaultPrimary {
   /**
-   * Heading field in *CallToAction → Primary*
+   * Heading field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.heading
+   * - **API ID Path**: call_to_action.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Text field in *CallToAction → Primary*
+   * Text field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.text
+   * - **API ID Path**: call_to_action.default.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
 
   /**
-   * button text field in *CallToAction → Primary*
+   * button text field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.button_text
+   * - **API ID Path**: call_to_action.default.primary.button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
 
   /**
-   * button link field in *CallToAction → Primary*
+   * button link field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.button_link
+   * - **API ID Path**: call_to_action.default.primary.button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button_link: prismic.LinkField;
 
   /**
-   * Color field in *CallToAction → Primary*
+   * Color field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: dark
-   * - **API ID Path**: call_to_action.primary.color
+   * - **API ID Path**: call_to_action.default.primary.color
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   color: prismic.SelectField<"dark" | "light", "filled">;
 
   /**
-   * Icon field in *CallToAction → Primary*
+   * Icon field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: farming
-   * - **API ID Path**: call_to_action.primary.icon
+   * - **API ID Path**: call_to_action.default.primary.icon
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   icon: prismic.SelectField<"farming" | "bee", "filled">;
@@ -2163,145 +2163,145 @@ export type CallToActionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *ColsWithImageText → Primary*
+ * Primary content in *ColsWithImageText → Default → Primary*
  */
 export interface ColsWithImageTextSliceDefaultPrimary {
   /**
-   * Heading field in *ColsWithImageText → Primary*
+   * Heading field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading
+   * - **API ID Path**: cols_with_image_text.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Background Color field in *ColsWithImageText → Primary*
+   * Background Color field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.background_color
+   * - **API ID Path**: cols_with_image_text.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
 
   /**
-   * Image Col 1 field in *ColsWithImageText → Primary*
+   * Image Col 1 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_1
+   * - **API ID Path**: cols_with_image_text.default.primary.image_col_1
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_1: prismic.ImageField<never>;
 
   /**
-   * Badge Col 1 field in *ColsWithImageText → Primary*
+   * Badge Col 1 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_1
+   * - **API ID Path**: cols_with_image_text.default.primary.badge_col_1
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   badge_col_1: prismic.KeyTextField;
 
   /**
-   * Heading Col 1 field in *ColsWithImageText → Primary*
+   * Heading Col 1 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_1
+   * - **API ID Path**: cols_with_image_text.default.primary.heading_col_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_1: prismic.RichTextField;
 
   /**
-   * Body Col 1 field in *ColsWithImageText → Primary*
+   * Body Col 1 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_1
+   * - **API ID Path**: cols_with_image_text.default.primary.body_col_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_1: prismic.RichTextField;
 
   /**
-   * Image Col 2 field in *ColsWithImageText → Primary*
+   * Image Col 2 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_2
+   * - **API ID Path**: cols_with_image_text.default.primary.image_col_2
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_2: prismic.ImageField<never>;
 
   /**
-   * Badge Col 2 field in *ColsWithImageText → Primary*
+   * Badge Col 2 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_2
+   * - **API ID Path**: cols_with_image_text.default.primary.badge_col_2
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   badge_col_2: prismic.KeyTextField;
 
   /**
-   * Heading Col 2 field in *ColsWithImageText → Primary*
+   * Heading Col 2 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_2
+   * - **API ID Path**: cols_with_image_text.default.primary.heading_col_2
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_2: prismic.RichTextField;
 
   /**
-   * Body Col 2 field in *ColsWithImageText → Primary*
+   * Body Col 2 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_2
+   * - **API ID Path**: cols_with_image_text.default.primary.body_col_2
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_2: prismic.RichTextField;
 
   /**
-   * Image Col 3 field in *ColsWithImageText → Primary*
+   * Image Col 3 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_3
+   * - **API ID Path**: cols_with_image_text.default.primary.image_col_3
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_3: prismic.ImageField<never>;
 
   /**
-   * Badge Col 3 field in *ColsWithImageText → Primary*
+   * Badge Col 3 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_3
+   * - **API ID Path**: cols_with_image_text.default.primary.badge_col_3
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   badge_col_3: prismic.KeyTextField;
 
   /**
-   * Heading Col 3 field in *ColsWithImageText → Primary*
+   * Heading Col 3 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_3
+   * - **API ID Path**: cols_with_image_text.default.primary.heading_col_3
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_3: prismic.RichTextField;
 
   /**
-   * Body Col 3 field in *ColsWithImageText → Primary*
+   * Body Col 3 field in *ColsWithImageText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_3
+   * - **API ID Path**: cols_with_image_text.default.primary.body_col_3
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_3: prismic.RichTextField;
@@ -2321,188 +2321,188 @@ export type ColsWithImageTextSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *ColsWithImageText → Primary*
+ * Primary content in *ColsWithImageText → 4 Columns → Primary*
  */
 export interface ColsWithImageTextSlice4ColumnsPrimary {
   /**
-   * Heading field in *ColsWithImageText → Primary*
+   * Heading field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Background Color field in *ColsWithImageText → Primary*
+   * Background Color field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.background_color
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
 
   /**
-   * Image Col 1 field in *ColsWithImageText → Primary*
+   * Image Col 1 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_1
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.image_col_1
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_1: prismic.ImageField<never>;
 
   /**
-   * Heading Col 1 field in *ColsWithImageText → Primary*
+   * Heading Col 1 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_1
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.heading_col_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_1: prismic.RichTextField;
 
   /**
-   * Body Col 1 field in *ColsWithImageText → Primary*
+   * Badge Col 1 field in *ColsWithImageText → 4 Columns → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.badge_col_1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  badge_col_1: prismic.KeyTextField;
+
+  /**
+   * Body Col 1 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_1
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.body_col_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_1: prismic.RichTextField;
 
   /**
-   * Image Col 2 field in *ColsWithImageText → Primary*
+   * Image Col 2 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_2
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.image_col_2
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_2: prismic.ImageField<never>;
 
   /**
-   * Badge Col 2 field in *ColsWithImageText → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_2
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  badge_col_2: prismic.KeyTextField;
-
-  /**
-   * Heading Col 2 field in *ColsWithImageText → Primary*
+   * Heading Col 2 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_2
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.heading_col_2
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_2: prismic.RichTextField;
 
   /**
-   * Body Col 2 field in *ColsWithImageText → Primary*
+   * Badge Col 2 field in *ColsWithImageText → 4 Columns → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.badge_col_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  badge_col_2: prismic.KeyTextField;
+
+  /**
+   * Body Col 2 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_2
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.body_col_2
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_2: prismic.RichTextField;
 
   /**
-   * Image Col 3 field in *ColsWithImageText → Primary*
+   * Image Col 3 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_3
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.image_col_3
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_3: prismic.ImageField<never>;
 
   /**
-   * Badge Col 3 field in *ColsWithImageText → Primary*
+   * Badge Col 3 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_3
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.badge_col_3
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   badge_col_3: prismic.KeyTextField;
 
   /**
-   * Heading Col 3 field in *ColsWithImageText → Primary*
+   * Heading Col 3 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_3
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.heading_col_3
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_3: prismic.RichTextField;
 
   /**
-   * Body Col 3 field in *ColsWithImageText → Primary*
+   * Body Col 3 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_3
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.body_col_3
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_3: prismic.RichTextField;
 
   /**
-   * Image Col 4 field in *ColsWithImageText → Primary*
+   * Image Col 4 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.image_col_4
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.image_col_4
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_col_4: prismic.ImageField<never>;
 
   /**
-   * Badge Col 4 field in *ColsWithImageText → Primary*
+   * Badge Col 4 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_4
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.badge_col_4
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   badge_col_4: prismic.KeyTextField;
 
   /**
-   * Heading Col 4 field in *ColsWithImageText → Primary*
+   * Heading Col 4 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.heading_col_4
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.heading_col_4
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_4: prismic.RichTextField;
 
   /**
-   * Body Col 4 field in *ColsWithImageText → Primary*
+   * Body Col 4 field in *ColsWithImageText → 4 Columns → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.body_col_4
+   * - **API ID Path**: cols_with_image_text.4Columns.primary.body_col_4
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_col_4: prismic.RichTextField;
-
-  /**
-   * Badge Col 1 field in *ColsWithImageText → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: cols_with_image_text.primary.badge_col_1
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  badge_col_1: prismic.KeyTextField;
 }
 
 /**
@@ -2538,15 +2538,15 @@ export type ColsWithImageTextSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *ContactUs → Primary*
+ * Primary content in *ContactUs → Default → Primary*
  */
 export interface ContactUsSliceDefaultPrimary {
   /**
-   * Reply To field in *ContactUs → Primary*
+   * Reply To field in *ContactUs → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact_us.primary.reply_to
+   * - **API ID Path**: contact_us.default.primary.reply_to
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   reply_to: prismic.KeyTextField;
@@ -2628,15 +2628,15 @@ export type EventsListSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Accordion → Primary*
+ * Primary content in *Accordion → Default → Primary*
  */
 export interface FaqSliceDefaultPrimary {
   /**
-   * Title field in *Accordion → Primary*
+   * Title field in *Accordion → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: faq.primary.title
+   * - **API ID Path**: faq.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.RichTextField;
@@ -2761,25 +2761,25 @@ export type FeaturesSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *FreeTxt → Primary*
+ * Primary content in *FreeTxt → Default → Primary*
  */
 export interface FreeTxtSliceDefaultPrimary {
   /**
-   * Heading field in *FreeTxt → Primary*
+   * Heading field in *FreeTxt → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: free_txt.primary.heading
+   * - **API ID Path**: free_txt.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Body field in *FreeTxt → Primary*
+   * Body field in *FreeTxt → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: free_txt.primary.body
+   * - **API ID Path**: free_txt.default.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
@@ -2799,25 +2799,25 @@ export type FreeTxtSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *FreeTxt → Primary*
+ * Primary content in *FreeTxt → 2 Column → Primary*
  */
 export interface FreeTxtSlice2ColumnPrimary {
   /**
-   * Heading field in *FreeTxt → Primary*
+   * Heading field in *FreeTxt → 2 Column → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: free_txt.primary.heading
+   * - **API ID Path**: free_txt.2Column.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Body field in *FreeTxt → Primary*
+   * Body field in *FreeTxt → 2 Column → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: free_txt.primary.body
+   * - **API ID Path**: free_txt.2Column.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
@@ -2837,25 +2837,25 @@ export type FreeTxtSlice2Column = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *FreeTxt → Primary*
+ * Primary content in *FreeTxt → 3 Column → Primary*
  */
 export interface FreeTxtSlice3ColumnPrimary {
   /**
-   * Heading field in *FreeTxt → Primary*
+   * Heading field in *FreeTxt → 3 Column → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: free_txt.primary.heading
+   * - **API ID Path**: free_txt.3Column.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Body field in *FreeTxt → Primary*
+   * Body field in *FreeTxt → 3 Column → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: free_txt.primary.body
+   * - **API ID Path**: free_txt.3Column.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
@@ -2895,117 +2895,117 @@ export type FreeTxtSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Hero → Primary*
+ * Primary content in *Hero → Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * image field in *Hero → Primary*
+   * image field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.image
+   * - **API ID Path**: hero.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * heading field in *Hero → Primary*
+   * heading field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.heading
+   * - **API ID Path**: hero.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * text field in *Hero → Primary*
+   * text field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.text
+   * - **API ID Path**: hero.default.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
 
   /**
-   * button link field in *Hero → Primary*
+   * button link field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.button_link
+   * - **API ID Path**: hero.default.primary.button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button_link: prismic.LinkField;
 
   /**
-   * button text field in *Hero → Primary*
+   * button text field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.button_text
+   * - **API ID Path**: hero.default.primary.button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
 
   /**
-   * Text Color field in *Hero → Primary*
+   * Text Color field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: light
-   * - **API ID Path**: hero.primary.text_color
+   * - **API ID Path**: hero.default.primary.text_color
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   text_color: prismic.SelectField<"light" | "dark", "filled">;
 
   /**
-   * Text Alignment field in *Hero → Primary*
+   * Text Alignment field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: center
-   * - **API ID Path**: hero.primary.text_alignment
+   * - **API ID Path**: hero.default.primary.text_alignment
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   text_alignment: prismic.SelectField<"center" | "left" | "right", "filled">;
 
   /**
-   * button border radius (Optionnel) field in *Hero → Primary*
+   * button border radius (Optionnel) field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: default is 16px
-   * - **API ID Path**: hero.primary.button_border_radius
+   * - **API ID Path**: hero.default.primary.button_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   button_border_radius: prismic.NumberField;
 
   /**
-   * Color Background field in *Hero → Primary*
+   * Color Background field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.color_background
+   * - **API ID Path**: hero.default.primary.color_background
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   color_background: prismic.ColorField;
 
   /**
-   * border radius field in *Hero → Primary*
+   * border radius field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.border_radius
+   * - **API ID Path**: hero.default.primary.border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   border_radius: prismic.NumberField;
 
   /**
-   * Background Opacity field in *Hero → Primary*
+   * Background Opacity field in *Hero → Hero → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: 0 - 100 (default is 100%)
-   * - **API ID Path**: hero.primary.background_opacity
+   * - **API ID Path**: hero.default.primary.background_opacity
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   background_opacity: prismic.NumberField;
@@ -3025,179 +3025,179 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Hero → Primary*
+ * Primary content in *Hero → HeroDouble → Primary*
  */
 export interface HeroSliceHeroDoublePrimary {
   /**
-   * first hero image field in *Hero → Primary*
+   * first hero image field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.image
+   * - **API ID Path**: hero.heroDouble.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * first hero heading field in *Hero → Primary*
+   * first hero heading field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.heading
+   * - **API ID Path**: hero.heroDouble.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * first hero text field in *Hero → Primary*
+   * first hero text field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.text
+   * - **API ID Path**: hero.heroDouble.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
 
   /**
-   * first hero button link field in *Hero → Primary*
+   * first hero button link field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.button_link
+   * - **API ID Path**: hero.heroDouble.primary.button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button_link: prismic.LinkField;
 
   /**
-   * first hero button text field in *Hero → Primary*
+   * first hero button text field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.button_text
+   * - **API ID Path**: hero.heroDouble.primary.button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
 
   /**
-   * first hero Text Color field in *Hero → Primary*
+   * first hero Text Color field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: light
-   * - **API ID Path**: hero.primary.text_color
+   * - **API ID Path**: hero.heroDouble.primary.text_color
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   text_color: prismic.SelectField<"light" | "dark", "filled">;
 
   /**
-   * first hero Text Alignment field in *Hero → Primary*
+   * first hero Text Alignment field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: center
-   * - **API ID Path**: hero.primary.text_alignment
+   * - **API ID Path**: hero.heroDouble.primary.text_alignment
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   text_alignment: prismic.SelectField<"center" | "left" | "right", "filled">;
 
   /**
-   * first hero color background field in *Hero → Primary*
+   * first hero color background field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.first_hero_color_background
+   * - **API ID Path**: hero.heroDouble.primary.first_hero_color_background
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   first_hero_color_background: prismic.ColorField;
 
   /**
-   * first hero border radius field in *Hero → Primary*
+   * first hero border radius field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.first_hero_border_radius
+   * - **API ID Path**: hero.heroDouble.primary.first_hero_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   first_hero_border_radius: prismic.NumberField;
 
   /**
-   * first hero Background Opacity field in *Hero → Primary*
+   * first hero Background Opacity field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.first_hero_background_opacity
+   * - **API ID Path**: hero.heroDouble.primary.first_hero_background_opacity
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   first_hero_background_opacity: prismic.NumberField;
 
   /**
-   * second hero image field in *Hero → Primary*
+   * second hero image field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_image
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   second_hero_image: prismic.ImageField<never>;
 
   /**
-   * second hero heading field in *Hero → Primary*
+   * second hero heading field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_heading
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   second_hero_heading: prismic.KeyTextField;
 
   /**
-   * second hero text field in *Hero → Primary*
+   * second hero text field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_text
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   second_hero_text: prismic.RichTextField;
 
   /**
-   * second hero button link field in *Hero → Primary*
+   * second hero button link field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_button_link
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   second_hero_button_link: prismic.LinkField;
 
   /**
-   * second hero button text field in *Hero → Primary*
+   * second hero button text field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_button_text
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   second_hero_button_text: prismic.KeyTextField;
 
   /**
-   * second hero Text color field in *Hero → Primary*
+   * second hero Text color field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: light
-   * - **API ID Path**: hero.primary.second_hero_text_color
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_text_color
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   second_hero_text_color: prismic.SelectField<"light" | "dark", "filled">;
 
   /**
-   * second hero Text alignment field in *Hero → Primary*
+   * second hero Text alignment field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: left
-   * - **API ID Path**: hero.primary.second_hero_text_alignment
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_text_alignment
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   second_hero_text_alignment: prismic.SelectField<
@@ -3206,41 +3206,41 @@ export interface HeroSliceHeroDoublePrimary {
   >;
 
   /**
-   * button border radius field in *Hero → Primary*
+   * button border radius field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: default is 16px
-   * - **API ID Path**: hero.primary.button_border_radius
+   * - **API ID Path**: hero.heroDouble.primary.button_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   button_border_radius: prismic.NumberField;
 
   /**
-   * second hero color background field in *Hero → Primary*
+   * second hero color background field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_color_background
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_color_background
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   second_hero_color_background: prismic.ColorField;
 
   /**
-   * second hero border radius field in *Hero → Primary*
+   * second hero border radius field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_border_radius
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   second_hero_border_radius: prismic.NumberField;
 
   /**
-   * second hero Background Opacity field in *Hero → Primary*
+   * second hero Background Opacity field in *Hero → HeroDouble → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.second_hero_background_opacity
+   * - **API ID Path**: hero.heroDouble.primary.second_hero_background_opacity
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   second_hero_background_opacity: prismic.NumberField;
@@ -3274,15 +3274,15 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceHeroDouble;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
- * Primary content in *HightLights → Primary*
+ * Primary content in *HightLights → Highlights → Primary*
  */
 export interface HightLightsSliceDefaultPrimary {
   /**
-   * Card border radius field in *HightLights → Primary*
+   * Card border radius field in *HightLights → Highlights → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: default is 16px
-   * - **API ID Path**: hight_lights.primary.card_border_radius
+   * - **API ID Path**: hight_lights.default.primary.card_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   card_border_radius: prismic.NumberField;
@@ -3369,25 +3369,25 @@ export type HightLightsSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *HightLights → Primary*
+ * Primary content in *HightLights → HighlightsHeading → Primary*
  */
 export interface HightLightsSliceHighlightsHeadingPrimary {
   /**
-   * section title field in *HightLights → Primary*
+   * section title field in *HightLights → HighlightsHeading → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hight_lights.primary.section_title
+   * - **API ID Path**: hight_lights.highlightsHeading.primary.section_title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_title: prismic.KeyTextField;
 
   /**
-   * Card border radius field in *HightLights → Primary*
+   * Card border radius field in *HightLights → HighlightsHeading → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: default is 12px
-   * - **API ID Path**: hight_lights.primary.card_border_radius
+   * - **API ID Path**: hight_lights.highlightsHeading.primary.card_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   card_border_radius: prismic.NumberField;
@@ -3442,25 +3442,25 @@ export type HightLightsSliceHighlightsHeading = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *HightLights → Primary*
+ * Primary content in *HightLights → HighlightsHeading 3 Column → Primary*
  */
 export interface HightLightsSliceHighlightsHeading3ColumnPrimary {
   /**
-   * section title field in *HightLights → Primary*
+   * section title field in *HightLights → HighlightsHeading 3 Column → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hight_lights.primary.section_title
+   * - **API ID Path**: hight_lights.highlightsHeading3Column.primary.section_title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_title: prismic.KeyTextField;
 
   /**
-   * Card border radius field in *HightLights → Primary*
+   * Card border radius field in *HightLights → HighlightsHeading 3 Column → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: default is 12px
-   * - **API ID Path**: hight_lights.primary.card_border_radius
+   * - **API ID Path**: hight_lights.highlightsHeading3Column.primary.card_border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   card_border_radius: prismic.NumberField;
@@ -3568,15 +3568,15 @@ export type HightLightsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *SliderImages → Primary*
+ * Primary content in *SliderImages → Default → Primary*
  */
 export interface HomeSliderSliceDefaultPrimary {
   /**
-   * button border radius (Optionnel) field in *SliderImages → Primary*
+   * button border radius (Optionnel) field in *SliderImages → Default → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: default is 12px
-   * - **API ID Path**: home_slider.primary.border_radius
+   * - **API ID Path**: home_slider.default.primary.border_radius
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   border_radius: prismic.NumberField;
@@ -3720,25 +3720,25 @@ export type HomeSliderSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *JobsForm → Primary*
+ * Primary content in *JobsForm → Default → Primary*
  */
 export interface JobsFormSliceDefaultPrimary {
   /**
-   * Heading field in *JobsForm → Primary*
+   * Heading field in *JobsForm → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: jobs_form.primary.heading
+   * - **API ID Path**: jobs_form.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Reply To field in *JobsForm → Primary*
+   * Reply To field in *JobsForm → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: jobs_form.primary.reply_to
+   * - **API ID Path**: jobs_form.default.primary.reply_to
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   reply_to: prismic.KeyTextField;
@@ -3820,25 +3820,25 @@ export type JobsListSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *LatestEvents → Primary*
+ * Primary content in *LatestEvents → Default → Primary*
  */
 export interface LatestEventsSliceDefaultPrimary {
   /**
-   * Heading field in *LatestEvents → Primary*
+   * Heading field in *LatestEvents → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_events.primary.heading
+   * - **API ID Path**: latest_events.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Background Color field in *LatestEvents → Primary*
+   * Background Color field in *LatestEvents → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_events.primary.background_color
+   * - **API ID Path**: latest_events.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
@@ -3875,25 +3875,25 @@ export type LatestEventsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *LatestJobs → Primary*
+ * Primary content in *LatestJobs → Default → Primary*
  */
 export interface LatestJobsSliceDefaultPrimary {
   /**
-   * Heading field in *LatestJobs → Primary*
+   * Heading field in *LatestJobs → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_jobs.primary.heading
+   * - **API ID Path**: latest_jobs.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Background Color field in *LatestJobs → Primary*
+   * Background Color field in *LatestJobs → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_jobs.primary.background_color
+   * - **API ID Path**: latest_jobs.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
@@ -3930,25 +3930,25 @@ export type LatestJobsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *LatestNews → Primary*
+ * Primary content in *LatestNews → Default → Primary*
  */
 export interface LatestNewsSliceDefaultPrimary {
   /**
-   * Heading field in *LatestNews → Primary*
+   * Heading field in *LatestNews → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_news.primary.heading
+   * - **API ID Path**: latest_news.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Background Color field in *LatestNews → Primary*
+   * Background Color field in *LatestNews → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_news.primary.background_color
+   * - **API ID Path**: latest_news.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
@@ -3985,25 +3985,25 @@ export type LatestNewsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *LatestRecipes → Primary*
+ * Primary content in *LatestRecipes → Default → Primary*
  */
 export interface LatestRecipesSliceDefaultPrimary {
   /**
-   * Heading field in *LatestRecipes → Primary*
+   * Heading field in *LatestRecipes → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_recipes.primary.heading
+   * - **API ID Path**: latest_recipes.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Background Color field in *LatestRecipes → Primary*
+   * Background Color field in *LatestRecipes → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: latest_recipes.primary.background_color
+   * - **API ID Path**: latest_recipes.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
@@ -4040,25 +4040,25 @@ export type LatestRecipesSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *NavigationItem → Primary*
+ * Primary content in *NavigationItem → Default → Primary*
  */
 export interface NavigationItemSliceDefaultPrimary {
   /**
-   * Name field in *NavigationItem → Primary*
+   * Name field in *NavigationItem → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation_item.primary.name_of_the_link
+   * - **API ID Path**: navigation_item.default.primary.name_of_the_link
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   name_of_the_link: prismic.KeyTextField;
 
   /**
-   * Link field in *NavigationItem → Primary*
+   * Link field in *NavigationItem → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation_item.primary.link_for_the_item
+   * - **API ID Path**: navigation_item.default.primary.link_for_the_item
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link_for_the_item: prismic.LinkField;
@@ -4150,45 +4150,45 @@ export type NewsListSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Newsletter → Primary*
+ * Primary content in *Newsletter → Default → Primary*
  */
 export interface NewsletterSliceDefaultPrimary {
   /**
-   * Heading field in *Newsletter → Primary*
+   * Heading field in *Newsletter → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.heading
+   * - **API ID Path**: newsletter.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Description field in *Newsletter → Primary*
+   * Description field in *Newsletter → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.description
+   * - **API ID Path**: newsletter.default.primary.description
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   description: prismic.RichTextField;
 
   /**
-   * button text field in *Newsletter → Primary*
+   * button text field in *Newsletter → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.button_text
+   * - **API ID Path**: newsletter.default.primary.button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
 
   /**
-   * Placeholder text field in *Newsletter → Primary*
+   * Placeholder text field in *Newsletter → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.placeholder_text
+   * - **API ID Path**: newsletter.default.primary.placeholder_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   placeholder_text: prismic.KeyTextField;
@@ -4315,25 +4315,25 @@ export type SearchResultSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *SimpleCover → Primary*
+ * Primary content in *SimpleCover → Default → Primary*
  */
 export interface SimpleCoverSliceDefaultPrimary {
   /**
-   * Title field in *SimpleCover → Primary*
+   * Title field in *SimpleCover → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: simple_cover.primary.title
+   * - **API ID Path**: simple_cover.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Background Color field in *SimpleCover → Primary*
+   * Background Color field in *SimpleCover → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: simple_cover.primary.background_color
+   * - **API ID Path**: simple_cover.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
@@ -4370,77 +4370,77 @@ export type SimpleCoverSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *DoubleColWithPicto → Primary*
+ * Primary content in *DoubleColWithPicto → Default → Primary*
  */
 export interface SliceDoubleColWithPictoSliceDefaultPrimary {
   /**
-   * Heading field in *DoubleColWithPicto → Primary*
+   * Heading field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice_double_col_with_picto.primary.heading
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Heading Col 1 field in *DoubleColWithPicto → Primary*
+   * Heading Col 1 field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice_double_col_with_picto.primary.heading_col_1
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.heading_col_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_1: prismic.RichTextField;
 
   /**
-   * Body 1 field in *DoubleColWithPicto → Primary*
+   * Body 1 field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice_double_col_with_picto.primary.body_1
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.body_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_1: prismic.RichTextField;
 
   /**
-   * Picto 1 field in *DoubleColWithPicto → Primary*
+   * Picto 1 field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: instructions
-   * - **API ID Path**: slice_double_col_with_picto.primary.picto_1
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.picto_1
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   picto_1: prismic.SelectField<"instructions" | "ingredients", "filled">;
 
   /**
-   * Heading Col 2 field in *DoubleColWithPicto → Primary*
+   * Heading Col 2 field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice_double_col_with_picto.primary.heading_col_2
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.heading_col_2
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading_col_2: prismic.RichTextField;
 
   /**
-   * Body 2 field in *DoubleColWithPicto → Primary*
+   * Body 2 field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice_double_col_with_picto.primary.body_2
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.body_2
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body_2: prismic.RichTextField;
 
   /**
-   * Picto 2 field in *DoubleColWithPicto → Primary*
+   * Picto 2 field in *DoubleColWithPicto → Default → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: ingredients
-   * - **API ID Path**: slice_double_col_with_picto.primary.picto_2
+   * - **API ID Path**: slice_double_col_with_picto.default.primary.picto_2
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   picto_2: prismic.SelectField<"ingredients" | "instructions", "filled">;
@@ -4478,25 +4478,25 @@ export type SliceDoubleColWithPictoSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Testimonials → Primary*
+ * Primary content in *Testimonials → Default → Primary*
  */
 export interface TestimonialsSliceDefaultPrimary {
   /**
-   * Heading field in *Testimonials → Primary*
+   * Heading field in *Testimonials → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.primary.heading
+   * - **API ID Path**: testimonials.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Text field in *Testimonials → Primary*
+   * Text field in *Testimonials → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.primary.text
+   * - **API ID Path**: testimonials.default.primary.text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   text: prismic.KeyTextField;
@@ -4548,35 +4548,35 @@ export type TestimonialsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *TextWithImage → Primary*
+ * Primary content in *TextWithImage → Default → Primary*
  */
 export interface TextWithImageSliceDefaultPrimary {
   /**
-   * Image field in *TextWithImage → Primary*
+   * Image field in *TextWithImage → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.primary.image
+   * - **API ID Path**: text_with_image.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * Heading field in *TextWithImage → Primary*
+   * Heading field in *TextWithImage → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.primary.heading
+   * - **API ID Path**: text_with_image.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * body field in *TextWithImage → Primary*
+   * body field in *TextWithImage → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.primary.body
+   * - **API ID Path**: text_with_image.default.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
@@ -4596,35 +4596,35 @@ export type TextWithImageSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *TextWithImage → Primary*
+ * Primary content in *TextWithImage → TextWithImage Reverse → Primary*
  */
 export interface TextWithImageSliceTextWithImageReversePrimary {
   /**
-   * Image field in *TextWithImage → Primary*
+   * Image field in *TextWithImage → TextWithImage Reverse → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.primary.image
+   * - **API ID Path**: text_with_image.textWithImageReverse.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * Heading field in *TextWithImage → Primary*
+   * Heading field in *TextWithImage → TextWithImage Reverse → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.primary.heading
+   * - **API ID Path**: text_with_image.textWithImageReverse.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * body field in *TextWithImage → Primary*
+   * body field in *TextWithImage → TextWithImage Reverse → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.primary.body
+   * - **API ID Path**: text_with_image.textWithImageReverse.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
@@ -4664,15 +4664,15 @@ export type TextWithImageSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *TopOfNews → Primary*
+ * Primary content in *TopOfNews → Default → Primary*
  */
 export interface TopOfNewsSliceDefaultPrimary {
   /**
-   * Heading field in *TopOfNews → Primary*
+   * Heading field in *TopOfNews → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: top_of_news.primary.heading
+   * - **API ID Path**: top_of_news.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
@@ -4726,35 +4726,35 @@ export type TopOfNewsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Video → Primary*
+ * Primary content in *Video → Default → Primary*
  */
 export interface VideoSliceDefaultPrimary {
   /**
-   * Video field in *Video → Primary*
+   * Video field in *Video → Default → Primary*
    *
    * - **Field Type**: Embed
    * - **Placeholder**: *None*
-   * - **API ID Path**: video.primary.video
+   * - **API ID Path**: video.default.primary.video
    * - **Documentation**: https://prismic.io/docs/field#embed
    */
   video: prismic.EmbedField;
 
   /**
-   * Heading field in *Video → Primary*
+   * Heading field in *Video → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: video.primary.heading
+   * - **API ID Path**: video.default.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Body field in *Video → Primary*
+   * Body field in *Video → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: video.primary.body
+   * - **API ID Path**: video.default.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
@@ -4774,35 +4774,35 @@ export type VideoSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Video → Primary*
+ * Primary content in *Video → Video right → Primary*
  */
 export interface VideoSliceVideoRightPrimary {
   /**
-   * Video field in *Video → Primary*
+   * Video field in *Video → Video right → Primary*
    *
    * - **Field Type**: Embed
    * - **Placeholder**: *None*
-   * - **API ID Path**: video.primary.video
+   * - **API ID Path**: video.videoRight.primary.video
    * - **Documentation**: https://prismic.io/docs/field#embed
    */
   video: prismic.EmbedField;
 
   /**
-   * Heading field in *Video → Primary*
+   * Heading field in *Video → Video right → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: video.primary.heading
+   * - **API ID Path**: video.videoRight.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
 
   /**
-   * Body field in *Video → Primary*
+   * Body field in *Video → Video right → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: video.primary.body
+   * - **API ID Path**: video.videoRight.primary.body
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   body: prismic.RichTextField;
